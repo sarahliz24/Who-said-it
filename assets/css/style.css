@@ -60,9 +60,10 @@ h1 {
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
     background-color: rgba(253, 202, 64, 0.9);
     box-shadow: 5px 5px 5px #e6e8e6;
+    color: #df2935;
 }
 
-/*  Question options container style*/
+/*  Set flexbox mode for question-options container*/
 .options-container {
     display: flex;
     flex-flow: row wrap;
@@ -70,6 +71,7 @@ h1 {
     align-items: center;
 }
 
+/*  Style question-options boxes*/
 .question-option {
     width: 125px;
     height: 100px;
@@ -81,4 +83,25 @@ h1 {
     font-size: 2.5em;
     letter-spacing: 1px;
     margin: 5%;
+}
+
+/*  Style next-button*/
+.next-button {
+    text-align: center;
+    border-radius: 15px;
+    border: solid #e6e8e6 3px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #0043DE;
+    background-color: #e6e8e6;
+    color: #df2935;
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-top: 15%;
+}
+
+/*  changes 'next' button font and shadow colours on mouse hover */
+.next-button:hover {
+    color: #0043DE;
+    box-shadow: 5px 5px 5px #df2935;
 }
