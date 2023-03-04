@@ -52,15 +52,18 @@ h1 {
 
 /*  Question box style*/
 .question-box {
-    width: fit-content;
-    margin: auto;
     border: solid #e6e8e6 3px;
     border-radius: 15px;
     /* converted #fdca40 to rgba to allow setting of opacity; 
-    https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
-    background-color: rgba(253, 202, 64, 0.9);
-    box-shadow: 5px 5px 5px #e6e8e6;
+    https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/
+    background-color: rgba(253, 202, 64, 0.9);*/
+    background-color: #e6e8e6;
+    box-shadow: 5px 5px 5px #0043DE;
     color: #df2935;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 /*  Set flexbox mode for question-options container*/
@@ -79,7 +82,7 @@ h1 {
     border: solid #e6e8e6 3px;
     box-shadow: 5px 5px 5px #0043DE;
     background-color: #e6e8e6;
-    color: #df2935;
+    color: #0043DE;
     font-size: 2.5em;
     letter-spacing: 1px;
     margin: 5%;
