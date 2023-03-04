@@ -6,6 +6,7 @@ body {
     color: #0043DE;
     font-family: 'Antic', sans-serif;
     font-size: 100%;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -14,4 +15,14 @@ h1 {
     font-size: 5em;
     letter-spacing: 5px;
     text-shadow: 5px 5px 5px #e6e8e6;
+}
+
+.intro-box {
+    width: fit-content;
+    margin: auto;
+    border: solid #e6e8e6 3px;
+    /* converted #fdca40 to rgba to allow setting of opacity; 
+    https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
+    background-color: rgba(253, 202, 64, 0.9);
+    box-shadow: 5px 5px 5px #e6e8e6;
 }
