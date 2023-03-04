@@ -3,8 +3,15 @@ body {
     background: url('../images/background.jpg');
     background-color: #fdca40; /*sets background colour in case image does not load*/ 
     background-size: cover;
-    color: #3772ff;
+    color: #0043DE;
     font-family: 'Antic', sans-serif;
+    font-size: 100%;
     text-align: center;
 }
 
+h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 5em;
+    letter-spacing: 5px;
+    text-shadow: 5px 5px 5px #e6e8e6;
+}
