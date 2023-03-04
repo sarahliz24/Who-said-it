@@ -95,12 +95,14 @@ h1 {
     border: solid #e6e8e6 3px;
     padding: 20px;
     box-shadow: 5px 5px 5px #0043DE;
-    background-color: #e6e8e6;
+    /*background-color: #e6e8e6;*/
     color: #df2935;
     font-family: 'Bangers', cursive;
     font-size: 2.5em;
     letter-spacing: 1px;
     margin-top: 15%;
+    background-color: rgba(253, 202, 64, 0.9);
+
 }
 
 /*  changes 'next' button font and shadow colours on mouse hover */
