@@ -17,6 +17,7 @@ h1 {
     text-shadow: 5px 5px 5px #e6e8e6;
 }
 
+/* Intro box style */ 
 .intro-box {
     width: fit-content;
     margin: auto;
@@ -26,4 +27,19 @@ h1 {
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
     background-color: rgba(253, 202, 64, 0.9);
     box-shadow: 5px 5px 5px #e6e8e6;
+}
+
+/*  'Let's play!' button */
+.play-button {
+    text-align: center;
+    border-radius: 15px;
+    border: solid #e6e8e6 3px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #e6e8e6;
+    background-color: #df2935;
+    color: #0043DE;
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-top: 25%;
 }
