@@ -4,10 +4,16 @@ const scoreTracker = document.getElementsByClassName("score-tracker");
 const questionBox = document.getElementsByClassName("score-tracker");
 const optionsContainer = document.getElementsByClassName("options-container");
 const questionOption = document.getElementsByClassName("question-option");
-const questionOption = document.getElementsByClassName("question-option");
+const home = document.getElementsByClassName("home");
+const game = document.getElementsByClassName("game");
+const endPage = document.getElementsByClassName("end-page");
 
 let next;
-
+let currentQuestion = {};
+let questionCounter = 0;
+let availableQuestions = [];
+const max_questions = 10;
+let score;
 
 //Lets DOM load before starting play//
 //Calls buttons, tells buttons what function to take when clicked//
