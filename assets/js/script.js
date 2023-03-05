@@ -1,16 +1,32 @@
+//Global variables//
+const letsPlay = document.getElementById("lets-play");
+const scoreTracker = document.getElementsByClassName("score-tracker");
+const questionBox = document.getElementsByClassName("score-tracker");
+const optionsContainer = document.getElementsByClassName("options-container");
+const questionOption = document.getElementsByClassName("question-option");
+const questionOption = document.getElementsByClassName("question-option");
+
+let next;
+
+
 //Lets DOM load before starting play//
-//Loads game area to start playing//
+//Calls buttons, tells buttons what function to take when clicked//
 document.addEventListener("DOMContentLoaded"), function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "play") {
-                startGame();
-            } else (this.getAttribute("data-type") === "next") {
-                newQuestion();
+                alert("This is working");
+               // startGame();
+            } else { 
+                let next = this.getAttribute("data-type");
+                alert("next button is working");
+                //newQuestion(next);
+            }
         });
-}
+    }
+};
 
 /* Questions array */
 
