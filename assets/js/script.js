@@ -1,3 +1,17 @@
+//Lets DOM load before starting play//
+//Loads game area to start playing//
+document.addEventListener("DOMContentLoaded"), function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "play") {
+                startGame();
+            } else (this.getAttribute("data-type") === "next") {
+                newQuestion();
+        });
+}
+
 /* Questions array */
 
 const questions = [{
