@@ -7,6 +7,8 @@ const questionOption = document.getElementsByClassName("question-option");
 const home = document.getElementsByClassName("home");
 const game = document.getElementsByClassName("game");
 const endPage = document.getElementsByClassName("end-page");
+const homeDisplay = document.getElementById("home-display");
+const gameDisplay = document.getElementById("game-display");
 
 let next;
 let currentQuestion = {};
@@ -15,24 +17,33 @@ let availableQuestions = [];
 const max_questions = 10;
 let score;
 
-//Lets DOM load before starting play//
-//Calls buttons, tells buttons what function to take when clicked//
+/*Lets DOM load before starting play//
+//Calls buttons, tells buttons what function to take when clicked
 document.addEventListener("DOMContentLoaded"), function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "play") {
-                alert("This is working");
-               // startGame();
-            } else { 
-                let next = this.getAttribute("data-type");
-                alert("next button is working");
+                //alert("This is working");
+                homeDisplay.style.display = "none";
+                gameDisplay.style.display = "block";
+                //startGame();
+            //} else { 
+               // let next = this.getAttribute("data-type");
+              //  alert("next button is working");
                 //newQuestion(next);
             }
         });
     }
-};
+};*/
+
+/* Displays and hides sections as advancing through gameplay*/
+letsPlay.addEventListener("click", () => {
+    homeDisplay.style.display = "none";
+    gameDisplay.style.display = "block";
+    //startGame();
+});
 
 /* Questions array */
 
@@ -162,3 +173,8 @@ const questions = [{
     answer: "Marilyn Monroe",
 },
 ]
+
+function startGame() {
+    currentQuestion = 0;
+    question.option.innerHTML = questions[currentQuestion].question;
+}

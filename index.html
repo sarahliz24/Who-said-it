@@ -25,25 +25,39 @@
      </section>
     
     <!-- Home page-->
-    <section class="home">
-     <div class="intro-box">
-        <p>Got some time to kill?</p>
-        <p>Want to prove your superior knowledge of the crazy things celebrities have said?</p>
-        <p>... Well, you've come to the right place!</p>
-     </div>
-     <div>
-        <!-- clicking button sends user to questions page: https://www.scaler.com/topics/how-to-make-a-button-link-to-another-page-in-html/ -->
-        <button type="button" id="lets-play" class="play-button" data-type="play" onclick="window.location.href = 'questions.html';">
-            Let's play!
-        </button>
-     </div>
+    <section id="home-display" class="home">
+         <div class="intro-box">
+            <p>Got some time to kill?</p>
+            <p>Want to prove your superior knowledge of the crazy things celebrities have said?</p>
+            <p>... Well, you've come to the right place!</p>
+         </div>
+         <div>
+           
+            <button type="button" id="lets-play" class="play-button" data-type="play">
+                  Let's play!
+            </button>
+         </div>
     </section>
 
-    <!-- Questions section-->
-    <section class="game">
-        
-    </section>
-
+     <!-- Questions section-->
+     <section id="game-display" class="game">
+         <div class="score-tracker">
+            <div>score tracker goes here</div>
+         </div>
+         <div class="question-box">
+            question goes here, this is a quite long funny question right here
+         </div>
+         <div class="options-container">
+            <span class="question-option">test</span>
+            <span class="question-option">test</span>
+            <span class="question-option">test</span>
+            <span class="question-option">test</span>
+         </div>
+         <div>
+            <button class="next-button" data-type="next">next question</button>
+         </div>
+      </section>    
+   
     <!-- Final page - scores, ?play again-->
     <section class="end-page">
         

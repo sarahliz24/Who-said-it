@@ -110,3 +110,11 @@ h1 {
     color: #0043DE;
     box-shadow: 5px 5px 5px #df2935;
 }
+
+#home-display {
+    display: block;
+}
+
+#game-display {
+    display: none;
+}
