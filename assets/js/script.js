@@ -1,7 +1,7 @@
 //Global variables//
 const letsPlay = document.getElementById("lets-play");
 const scoreTracker = document.getElementsByClassName("score-tracker");
-const questionBox = document.getElementsByClassName("score-tracker");
+const questionBox = document.getElementsByClassName("question-box");
 const optionsContainer = document.getElementsByClassName("options-container");
 const questionOption = document.getElementsByClassName("question-option");
 const home = document.getElementsByClassName("home");
@@ -38,16 +38,16 @@ document.addEventListener("DOMContentLoaded"), function() {
     }
 };*/
 
-/* Displays and hides sections as advancing through gameplay*/
+/* Displays and hides sections as advancing through gameplay via button clicks*/
 letsPlay.addEventListener("click", () => {
     homeDisplay.style.display = "none";
     gameDisplay.style.display = "block";
-    //startGame();
+    startGame();
 });
 
 /* Questions array */
 
-const questions = [{
+const questionsArray = [{
     question: "Movie acting suits me because I only need to be good for 90 seconds at a time",
     options: ["Ryan Reynolds", "Angelina Jolie", "Bill Murray", "Arnold Schwarzenegger"],
     answer: "Bill Murray",
