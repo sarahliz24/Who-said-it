@@ -3,392 +3,18 @@ const letsPlay = document.getElementById("lets-play");
 const scoreTracker = document.getElementsByClassName("score-tracker");
 const questionBox = document.getElementsByClassName("question-box");
 const optionsContainer = document.getElementsByClassName("options-container");
-const answerOption = Array.from(document.getElementsByClassName("answer-option"));
+const questionOption = document.getElementsByClassName("question-option");
 const home = document.getElementsByClassName("home");
 const game = document.getElementsByClassName("game");
 const endPage = document.getElementsByClassName("end-page");
 const homeDisplay = document.getElementById("home-display");
 const gameDisplay = document.getElementById("game-display");
-//const theQuestion = document.getElementByI("theQuestion");
-//const options = Array.from(document.querySelectorAll('option'))
 
 let next;
 let currentQuestion = {};
 let questionCounter = 0;
 let availableQuestions = [];
-const max_questions = //Global variables//
-const letsPlay = document.getElementById("lets-play");
-const scoreTracker = document.getElementsByClassName("score-tracker");
-const questionBox = document.getElementsByClassName("question-box");
-const optionsContainer = document.getElementsByClassName("options-container");
-let answerOption = Array.from(document.getElementsByClassName("answer-option"));
-const home = document.getElementsByClassName("home");
-const game = document.getElementsByClassName("game");
-const endPage = document.getElementsByClassName("end-page");
-const homeDisplay = document.getElementById("home-display");
-const gameDisplay = document.getElementById("game-display");
-//const theQuestion = document.getElementByI("theQuestion");
-//const options = Array.from(document.querySelectorAll('option'))
-
-let next;
-let currentQuestion = {};
-let questionCounter = 0;
-let availableQuestions = [];
-//let acceptingAnswers = false;
-const maxQuestions = 3;
-let score =0;
-
-/* Questions array */
-let questionsArray = [{
-    question: "Movie acting suits me because I only need to be good for 90 seconds at a time",
-    option1: "Ryan Reynolds",
-    option2: "Angelina Jolie",
-    option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
-    answer: "3",
-},
-{
-    question: "Being a father is the single greatest feeling on earth. Not including those wonderful years I spent without a child, of course",
-    option1: "Zach Galifianakis",
-    option2: "Ryan Reynolds",
-    option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
-    answer: "2",
-},
-{
-    question: "Get at least eight hours of beauty sleep, nine if you are ugly",
-    option1: "Christina Aguilera",
-    option2: "Tara Reid",
-    option3: "Marilyn Monroe",
-    option4: "Betty White",
-    answer: "4",
-},
-]
-
-/* Displays and hides sections as advancing through gameplay via button clicks*/
-letsPlay.addEventListener("click", () => {
-    homeDisplay.style.display = "none";
-    gameDisplay.style.display = "block";
-});
-
-/*Lets DOM load before starting play*/
-document.addEventListener("DOMContentLoaded", function() {
-    startGame();
-});
-
-let startGame = () => {
-    //questionCounter = 0;
-    //document.questionOption.innerHTML = questions[currentQuestion].question;
-    //score = 0;
-    availableQuestions = [...questionsArray];
-    getQuestion();
-}
-
-let getQuestion = () => {
-    //if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-       // localStorage.setItem('mostRecentScore', score)
-
-       // return window.location.assign('about.html')
-   // }
-
-    //questionCounter++
-
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    
-    questionBox.outerText = currentQuestion.question;
-    console.log(questionBox);
-
-    answerOption.forEach((option) => {
-        const number = option.dataset["number"];
-        option.innerText = currentQuestion['option' + number];
-    })
-
-    //availableQuestions.splice(questionIndex, 1);
-
-    // acceptingAnswers = true;
-}
-
-startGame();//Global variables//
-const letsPlay = document.getElementById("lets-play");
-const scoreTracker = document.getElementsByClassName("score-tracker");
-const questionBox = document.getElementsByClassName("question-box");
-const optionsContainer = document.getElementsByClassName("options-container");
-let answerOption = Array.from(document.getElementsByClassName("answer-option"));
-const home = document.getElementsByClassName("home");
-const game = document.getElementsByClassName("game");
-const endPage = document.getElementsByClassName("end-page");
-const homeDisplay = document.getElementById("home-display");
-const gameDisplay = document.getElementById("game-display");
-//const theQuestion = document.getElementByI("theQuestion");
-//const options = Array.from(document.querySelectorAll('option'))
-
-let next;
-let currentQuestion = {};
-let questionCounter = 0;
-let availableQuestions = [];
-//let acceptingAnswers = false;
-const maxQuestions = 3;
-let score =0;
-
-/* Questions array */
-let questionsArray = [{
-    question: "Movie acting suits me because I only need to be good for 90 seconds at a time",
-    option1: "Ryan Reynolds",
-    option2: "Angelina Jolie",
-    option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
-    answer: "3",
-},
-{
-    question: "Being a father is the single greatest feeling on earth. Not including those wonderful years I spent without a child, of course",
-    option1: "Zach Galifianakis",
-    option2: "Ryan Reynolds",
-    option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
-    answer: "2",
-},
-{
-    question: "Get at least eight hours of beauty sleep, nine if you are ugly",
-    option1: "Christina Aguilera",
-    option2: "Tara Reid",
-    option3: "Marilyn Monroe",
-    option4: "Betty White",
-    answer: "4",
-},
-]
-
-/* Displays and hides sections as advancing through gameplay via button clicks*/
-letsPlay.addEventListener("click", () => {
-    homeDisplay.style.display = "none";
-    gameDisplay.style.display = "block";
-});
-
-/*Lets DOM load before starting play*/
-document.addEventListener("DOMContentLoaded", function() {
-    startGame();
-});
-
-let startGame = () => {
-    //questionCounter = 0;
-    //document.questionOption.innerHTML = questions[currentQuestion].question;
-    //score = 0;
-    availableQuestions = [...questionsArray];
-    getQuestion();
-}
-
-let getQuestion = () => {
-    //if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-       // localStorage.setItem('mostRecentScore', score)
-
-       // return window.location.assign('about.html')
-   // }
-
-    //questionCounter++
-
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    
-    questionBox.outerText = currentQuestion.question;
-    console.log(questionBox);
-
-    answerOption.forEach((option) => {
-        const number = option.dataset["number"];
-        option.innerText = currentQuestion['option' + number];
-    })
-
-    //availableQuestions.splice(questionIndex, 1);
-
-    // acceptingAnswers = true;
-}
-
-startGame();//Global variables//
-const letsPlay = document.getElementById("lets-play");
-const scoreTracker = document.getElementsByClassName("score-tracker");
-const questionBox = document.getElementsByClassName("question-box");
-const optionsContainer = document.getElementsByClassName("options-container");
-let answerOption = Array.from(document.getElementsByClassName("answer-option"));
-const home = document.getElementsByClassName("home");
-const game = document.getElementsByClassName("game");
-const endPage = document.getElementsByClassName("end-page");
-const homeDisplay = document.getElementById("home-display");
-const gameDisplay = document.getElementById("game-display");
-//const theQuestion = document.getElementByI("theQuestion");
-//const options = Array.from(document.querySelectorAll('option'))
-
-let next;
-let currentQuestion = {};
-let questionCounter = 0;
-let availableQuestions = [];
-//let acceptingAnswers = false;
-const maxQuestions = 3;
-let score =0;
-
-/* Questions array */
-let questionsArray = [{
-    question: "Movie acting suits me because I only need to be good for 90 seconds at a time",
-    option1: "Ryan Reynolds",
-    option2: "Angelina Jolie",
-    option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
-    answer: "3",
-},
-{
-    question: "Being a father is the single greatest feeling on earth. Not including those wonderful years I spent without a child, of course",
-    option1: "Zach Galifianakis",
-    option2: "Ryan Reynolds",
-    option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
-    answer: "2",
-},
-{
-    question: "Get at least eight hours of beauty sleep, nine if you are ugly",
-    option1: "Christina Aguilera",
-    option2: "Tara Reid",
-    option3: "Marilyn Monroe",
-    option4: "Betty White",
-    answer: "4",
-},
-]
-
-/* Displays and hides sections as advancing through gameplay via button clicks*/
-letsPlay.addEventListener("click", () => {
-    homeDisplay.style.display = "none";
-    gameDisplay.style.display = "block";
-});
-
-/*Lets DOM load before starting play*/
-document.addEventListener("DOMContentLoaded", function() {
-    startGame();
-});
-
-let startGame = () => {
-    //questionCounter = 0;
-    //document.questionOption.innerHTML = questions[currentQuestion].question;
-    //score = 0;
-    availableQuestions = [...questionsArray];
-    getQuestion();
-}
-
-let getQuestion = () => {
-    //if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-       // localStorage.setItem('mostRecentScore', score)
-
-       // return window.location.assign('about.html')
-   // }
-
-    //questionCounter++
-
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    
-    questionBox.outerText = currentQuestion.question;
-    console.log(questionBox);
-
-    answerOption.forEach((option) => {
-        const number = option.dataset["number"];
-        option.innerText = currentQuestion['option' + number];
-    })
-
-    //availableQuestions.splice(questionIndex, 1);
-
-    // acceptingAnswers = true;
-}
-
-startGame();//Global variables//
-const letsPlay = document.getElementById("lets-play");
-const scoreTracker = document.getElementsByClassName("score-tracker");
-const questionBox = document.getElementsByClassName("question-box");
-const optionsContainer = document.getElementsByClassName("options-container");
-let answerOption = Array.from(document.getElementsByClassName("answer-option"));
-const home = document.getElementsByClassName("home");
-const game = document.getElementsByClassName("game");
-const endPage = document.getElementsByClassName("end-page");
-const homeDisplay = document.getElementById("home-display");
-const gameDisplay = document.getElementById("game-display");
-//const theQuestion = document.getElementByI("theQuestion");
-//const options = Array.from(document.querySelectorAll('option'))
-
-let next;
-let currentQuestion = {};
-let questionCounter = 0;
-let availableQuestions = [];
-//let acceptingAnswers = false;
-const maxQuestions = 3;
-let score =0;
-
-/* Questions array */
-let questionsArray = [{
-    question: "Movie acting suits me because I only need to be good for 90 seconds at a time",
-    option1: "Ryan Reynolds",
-    option2: "Angelina Jolie",
-    option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
-    answer: "3",
-},
-{
-    question: "Being a father is the single greatest feeling on earth. Not including those wonderful years I spent without a child, of course",
-    option1: "Zach Galifianakis",
-    option2: "Ryan Reynolds",
-    option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
-    answer: "2",
-},
-{
-    question: "Get at least eight hours of beauty sleep, nine if you are ugly",
-    option1: "Christina Aguilera",
-    option2: "Tara Reid",
-    option3: "Marilyn Monroe",
-    option4: "Betty White",
-    answer: "4",
-},
-]
-
-/* Displays and hides sections as advancing through gameplay via button clicks*/
-letsPlay.addEventListener("click", () => {
-    homeDisplay.style.display = "none";
-    gameDisplay.style.display = "block";
-});
-
-/*Lets DOM load before starting play*/
-document.addEventListener("DOMContentLoaded", function() {
-    startGame();
-});
-
-let startGame = () => {
-    //questionCounter = 0;
-    //document.questionOption.innerHTML = questions[currentQuestion].question;
-    //score = 0;
-    availableQuestions = [...questionsArray];
-    getQuestion();
-}
-
-let getQuestion = () => {
-    //if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-       // localStorage.setItem('mostRecentScore', score)
-
-       // return window.location.assign('about.html')
-   // }
-
-    //questionCounter++
-
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    
-    questionBox.outerText = currentQuestion.question;
-    console.log(questionBox);
-
-    answerOption.forEach((option) => {
-        const number = option.dataset["number"];
-        option.innerText = currentQuestion['option' + number];
-    })
-
-    //availableQuestions.splice(questionIndex, 1);
-
-    // acceptingAnswers = true;
-}
-
-startGame();;
+const max_questions = 10;
 let score;
 
 /* Questions array */
@@ -427,10 +53,10 @@ const questionsArray = [{
 },
 {
     question: "I make Jessica Simpson look like a rock scientist",
-    option1: "Christina Aguilera"
-    option2: "Kim Kardashian"
-    option3: "Tara Reid"
-    option4: "Angelina Jolie"
+    option1: "Christina Aguilera",
+    option2: "Kim Kardashian",
+    option3: "Tara Reid",
+    option4: "Angelina Jolie",
     answer: "3",
 },
 {
@@ -477,6 +103,7 @@ const questionsArray = [{
     question: "It is really hard to maintain a one-on-one relationship if the other person is not going to allow me to be with other people",
     option1: "Kate Moss",
     option2: "Axel Rose",
+    option3: "David Beckham",
     option4: "Bobby Robson",
     answer: "2",
 },
@@ -525,7 +152,7 @@ const questionsArray = [{
     option1: "Donald Trump",
     option2: "Sean Connery",
     option3: "Axel Rose",
-    option4: "Paris Hilton".,
+    option4: "Paris Hilton",
     answer: "4",
 },
 {
@@ -571,7 +198,7 @@ const questionsArray = [{
 {
     question: "I think gay marriage is something that should be between a man and a woman",
     option1: "Britney Spears",
-    option2: "Donald Trump"
+    option2: "Donald Trump",
     option4: "Arnold Schwarzenegger",
     answer: "4",
 },
@@ -579,17 +206,17 @@ const questionsArray = [{
     question: "Smoking kills. If you are killed, you are lost a very important part of your life",
     option1: "Kim Kardashian",
     option2: "Brooke Shields",
-    option3: "Marilyn Monroe"
+    option3: "Marilyn Monroe",
     option4: "Paris Hilton",
     options: "Marilyn Monroe",
     answer: "2",
 },
 {
     question: "If you are gonna be two-faced at least make one of them pretty",
-    option1: "Kate Moss"
-    option2: "Betty White"
-    option3: "Brooke Shields"
-    option4: "Marilyn Monroe"
+    option1: "Kate Moss",
+    option2: "Betty White",
+    option3: "Brooke Shields",
+    option4: "Marilyn Monroe",
     answer: "4",
 },
 ]
