@@ -17,26 +17,10 @@ let availableQuestions = [];
 const max_questions = 10;
 let score;
 
-/*Lets DOM load before starting play//
-//Calls buttons, tells buttons what function to take when clicked
+/*Lets DOM load before starting play*/
 document.addEventListener("DOMContentLoaded"), function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "play") {
-                //alert("This is working");
-                homeDisplay.style.display = "none";
-                gameDisplay.style.display = "block";
-                //startGame();
-            //} else { 
-               // let next = this.getAttribute("data-type");
-              //  alert("next button is working");
-                //newQuestion(next);
-            }
-        });
-    }
-};*/
+    function startGame();
+};
 
 /* Displays and hides sections as advancing through gameplay via button clicks*/
 letsPlay.addEventListener("click", () => {
@@ -173,8 +157,3 @@ const questionsArray = [{
     answer: "Marilyn Monroe",
 },
 ]
-
-function startGame() {
-    currentQuestion = 0;
-    question.option.innerHTML = questions[currentQuestion].question;
-}
