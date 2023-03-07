@@ -18,16 +18,20 @@ const max_questions = 10;
 let score;
 
 /*Lets DOM load before starting play*/
-document.addEventListener("DOMContentLoaded"), function() {
-    function startGame();
-};
+document.addEventListener("DOMContentLoaded", function() {
+    startGame();
+});
 
 /* Displays and hides sections as advancing through gameplay via button clicks*/
 letsPlay.addEventListener("click", () => {
     homeDisplay.style.display = "none";
     gameDisplay.style.display = "block";
-    startGame();
 });
+
+function startGame() {
+    currentQuestion = 0;
+    question.option.innerHTML = questions[currentQuestion].question;
+}
 
 /* Questions array */
 
