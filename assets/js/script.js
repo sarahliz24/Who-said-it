@@ -1,9 +1,9 @@
 //Global variables//
 const letsPlay = document.getElementById("lets-play");
 const scoreTracker = document.getElementsByClassName("score-tracker");
-const questionBox = document.getElementsByClassName("question-box");
+const questionBox = document.getElementById("question-box");
 const optionsContainer = document.getElementsByClassName("options-container");
-const questionOption = document.getElementsByClassName("question-option");
+let answerOption = Array.from(document.getElementsByClassName("answer-option"));
 const home = document.getElementsByClassName("home");
 const game = document.getElementsByClassName("game");
 const endPage = document.getElementsByClassName("end-page");
@@ -241,7 +241,7 @@ let getQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     
-    questionBox.outerText = currentQuestion.question;
+    questionBox.innerText = currentQuestion.question;
     console.log(questionBox);
 
     answerOption.forEach((option) => {
