@@ -13,7 +13,7 @@ const gameDisplay = document.getElementById("game-display");
 let next;
 let currentQuestion = {};
 let questionCounter = 0;
-let availableQuestions = [];
+let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
 const max_questions = 10;
 let score;
 
@@ -28,11 +28,20 @@ letsPlay.addEventListener("click", () => {
     gameDisplay.style.display = "block";
 });
 
+/*Starts game*/
 let startGame = () => {
-    availableQuestions = [...questionsArray];
+    randomiser();
     getQuestion();
+    console.log(availableQuestions);
 }
 
+/*randomises question array and cut array length to 10 questions, ensuring no repeats*/
+let randomiser = () => {
+    availableQuestions.sort((a, b) => 0.5 - Math.random()); //sorts questions array copy into random order
+    availableQuestions.length = 10; //removes last 15 questions from new array
+}
+
+/*Gets a question set*/
 let getQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
