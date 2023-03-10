@@ -57,9 +57,19 @@ let getQuestion = () => {
 
 startGame ();
 
+// check to see if at end of question set - if so, send to end page// 
+
 //Event listeners for user answer feedback - answer box turns green if correct, red if incorrect//
 
 //next button to load next question//
+next = document.getElementById("next-button");
+next.addEventListener("click", loadNextQ);
+
+function loadNextQ () {
+    alert("you clicked the next button");
+    questionCounter++;
+    console.log(questionCounter);
+}
 
 //progress tracker//
 

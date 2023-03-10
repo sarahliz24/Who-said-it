@@ -89,7 +89,7 @@ h1 {
 }
 
 /*  Style next-button*/
-.next-button {
+#next-button {
     text-align: center;
     border-radius: 15px;
     border: solid #e6e8e6 3px;
