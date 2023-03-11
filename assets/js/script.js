@@ -11,6 +11,8 @@ const homeDisplay = document.getElementById("home-display");
 const gameDisplay = document.getElementById("game-display");
 const nextButton = document.getElementById("next-button");
 const endButton = document.getElementById("end-button");
+const playAgainButton = document.getElementById("play-again-button");
+const goHomeButton = document.getElementById("go-home-button");
 
 let next;
 let currentQuestion = {};
