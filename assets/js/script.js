@@ -96,10 +96,16 @@ endButton.addEventListener("click", () => {
     endPage.style.display = "block";
 });
 
-//add event listener for end page buttons
+/*sends user to start of game again when clicking playAgainButton*/
 playAgainButton.addEventListener("click", () => {
     //homeDisplay.style.display = "none";
     gameDisplay.style.display = "block";
     endPage.style.display = "none";
     startGame()
+});
+
+goHomeButton.addEventListener("click", () => {
+    homeDisplay.style.display = "block";
+    //gameDisplay.style.display = "block";
+    endPage.style.display = "none";
 });
