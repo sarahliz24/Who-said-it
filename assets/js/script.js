@@ -89,6 +89,15 @@ function loadNextQ () {
 //Code to ensure questions are not repeated during a single game//
 
 //end page - final score feedback, ?play again//
+/* resets game */
+function resetGame () {
+    //document.gameDisplay.reload();
+    questionCounter = 0;
+    endButton.style.display = "none";
+    nextButton.style.display = "block";
+    startGame();
+}
+
 /*sends user to end page when clicking end button at end of question 10*/
 endButton.addEventListener("click", () => {
     //homeDisplay.style.display = "none";
@@ -101,7 +110,8 @@ playAgainButton.addEventListener("click", () => {
     //homeDisplay.style.display = "none";
     gameDisplay.style.display = "block";
     endPage.style.display = "none";
-    startGame()
+    resetGame ();
+    //startGame();
 });
 
 goHomeButton.addEventListener("click", () => {
