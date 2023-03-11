@@ -75,8 +75,37 @@ next.addEventListener("click", loadNextQ);
 
 function loadNextQ () {
     //alert("you clicked the next button");
+    //questionCounter++;
+    //console.log(questionCounter);
+
+   // let link = document.querySelector('wrong-answer');
+    //if (link) {
+     //   link.removeAttribute('wrong-answer');
+    //}
+
+       // function removeClass () {
+           // let apple = document.getElementsByClassName('answer-option');
+           // apple.classList.remove("correct-answer");
+                //if (document.getElementsByClass('correct-answer')) {
+               // document.getElementsByClass('correct-answer').removeClass("correct-answer");
+           // }
+           // if (document.getElementsByClassName('wrong-answer')) {
+           //     document.getElementsByClassName('wrong-answer').removeClass("wrong-answer");
+           // }
+       // } 
+
+        //removeClass()
+
     questionCounter++;
     console.log(questionCounter);
+
+    //function myFunction() {
+      //  var element = document.getElementById("myDIV");
+       // element.classList.remove("mystyle");
+      //}
+   // document.optionsContainer.classList.remove('wrong-answer');
+
+    //document.getElementById("theID").removeAttribute("class")
 
     getQuestion();
     if (questionCounter >= 3) {
@@ -103,14 +132,26 @@ function scoreTracker() {
                 score++;
                 console.log("CORRECT! your score is now " + score);
                 answerOption[i].classList.add('correct-answer');   //Add class to display correct answer feedback to user
+                setTimeout(function() {
+                    answerOption[i].classList.remove('correct-answer');
+                }, 1000);  //correct answer display removed after a time 
                 } else {
                     score;
                     answerOption[i].classList.add('wrong-answer'); //Add class to display wrong answer feedback to user
                     console.log("WRONG! your score is now " + score);
+                    setTimeout(function() {
+                        answerOption[i].classList.remove('wrong-answer');
+                    }, 1000);  //correct answer display removed after a time 
                 }
     });
     };
 };
+
+/* var header = $('#header');
+header.addClass('blue');
+setTimeout(function() {
+    header.removeClass('blue');
+}, 4000); */
 
 scoreTracker();
 
