@@ -28,6 +28,7 @@ h1 {
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
     background-color: rgba(253, 202, 64, 0.9);
     box-shadow: 5px 5px 5px #e6e8e6;
+    font-size: 1.2em;
 }
 
 .score-display {
