@@ -13,6 +13,7 @@ const nextButton = document.getElementById("next-button");
 const endButton = document.getElementById("end-button");
 const playAgainButton = document.getElementById("play-again-button");
 const goHomeButton = document.getElementById("go-home-button");
+const tracker = document.getElementById("tracker");
 //const span = document.getElementsByTagName("span");
 console.log(answerOption);
 
@@ -130,6 +131,7 @@ function scoreTracker() {
             if (i == (answer - 1)) {
                 score++;
                 console.log("CORRECT! your score is now " + score);
+                tracker.innerText = ("CORRECT! your score is now " + score + " out of 10");
                 answerOption[i].classList.add('correct-answer');   //Add class to display correct answer feedback to user
                 setTimeout(function() {
                     answerOption[i].classList.remove('correct-answer');
@@ -138,6 +140,7 @@ function scoreTracker() {
                     score;
                     answerOption[i].classList.add('wrong-answer'); //Add class to display wrong answer feedback to user
                     console.log("WRONG! your score is now " + score);
+                    tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
                     setTimeout(function() {
                         answerOption[i].classList.remove('wrong-answer');
                     }, 1000);  //correct answer display removed after a time 
