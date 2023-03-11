@@ -14,6 +14,7 @@ const endButton = document.getElementById("end-button");
 const playAgainButton = document.getElementById("play-again-button");
 const goHomeButton = document.getElementById("go-home-button");
 const tracker = document.getElementById("tracker");
+const outroBox = document.getElementById("outro-box");
 //const span = document.getElementsByTagName("span");
 console.log(answerOption);
 
@@ -42,6 +43,7 @@ let startGame = () => {
     randomiser();
     getQuestion();
     console.log(availableQuestions);
+    scoreTracker();
 }
 
 /*randomises question array and cut array length to 10 questions, ensuring no repeats*/
@@ -64,7 +66,7 @@ let getQuestion = () => {
     })
 }
 
-startGame ();
+// startGame ();
 
 // check to see if at end of question set - if so, send to end page// 
 
@@ -149,7 +151,9 @@ function scoreTracker() {
     };
 };
 
-scoreTracker();
+startGame();
+
+//scoreTracker();
 
 //end page - final score feedback, ?play again//
 /* resets game */
@@ -158,7 +162,9 @@ function resetGame () {
     questionCounter = 0;
     score = 0;
     endButton.style.display = "none";
-    nextButton.style.display = "block";
+    nextButton.style.display = "inline-block";
+    tracker.innerText = "Welcome! Click on an answer to start playing."
+    currentQuestion = {};
     startGame();
 }
 
@@ -167,6 +173,13 @@ endButton.addEventListener("click", () => {
     //homeDisplay.style.display = "none";
     gameDisplay.style.display = "none";
     endPage.style.display = "block";
+    if (score <= 4) {
+        outroBox.innerText = "Your final score is " + score + " out of 10."+"\n"+ "\n"+ "You tried hard, but you really need to brush up on your celebrity knowledge!!"+"\n"+"Thanks for playing";
+    } else if (score < 7) {
+        outroBox.innerText = "Your final score is " + score + " out of 10."+"\n"+ "You were decidedly average, maybe playing again will help??"+"\n"+"Thanks for playing";
+    } else {
+        outroBox.innerText = "Your final score is " + score + " out of 10."+"\n"+ "Wow, you really know a lot of useless facts about celebrities - can you prove you're really great by scoring so high again??"+"\n"+"Thanks for playing";
+    }
 });
 
 /*sends user to start of game again when clicking playAgainButton*/
