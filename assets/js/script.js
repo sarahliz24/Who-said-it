@@ -9,6 +9,8 @@ const game = document.getElementsByClassName("game");
 const endPage = document.getElementsByClassName("end-page");
 const homeDisplay = document.getElementById("home-display");
 const gameDisplay = document.getElementById("game-display");
+const nextButton = document.getElementById("next-button");
+const endButton = document.getElementById("end-button");
 
 let next;
 let currentQuestion = {};
@@ -69,6 +71,12 @@ function loadNextQ () {
     alert("you clicked the next button");
     questionCounter++;
     console.log(questionCounter);
+    getQuestion();
+    if (questionCounter > 3) {
+        console.log("more than 3");
+        nextButton.style.display = "none";
+        endButton.style.display = "block";
+    }
 }
 
 //progress tracker//
