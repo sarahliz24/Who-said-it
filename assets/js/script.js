@@ -101,9 +101,10 @@ function scoreTracker() {
             if (i == (answer - 1)) {
                 score++;
                 console.log(score);
-                //document.getElementById("MyElement").classList.add('MyClass');   //Add class to display correct answer feedback to user
+                answerOption[i].classList.add('correct-answer');   //Add class to display correct answer feedback to user
                 } else {
                     score;
+                    answerOption[i].classList.add('wrong-answer');
                     console.log(score);
                 }
     });
