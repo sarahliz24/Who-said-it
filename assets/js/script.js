@@ -66,12 +66,12 @@ startGame ();
 
 //Event listeners for user answer feedback - answer box turns green if correct, red if incorrect//
 
-//next button to load next question//
+/*next button to load next question*/
 next = document.getElementById("next-button");
 next.addEventListener("click", loadNextQ);
 
 function loadNextQ () {
-    alert("you clicked the next button");
+    //alert("you clicked the next button");
     questionCounter++;
     console.log(questionCounter);
     getQuestion();
@@ -89,11 +89,17 @@ function loadNextQ () {
 //Code to ensure questions are not repeated during a single game//
 
 //end page - final score feedback, ?play again//
+/*sends user to end page when clicking end button at end of question 10*/
 endButton.addEventListener("click", () => {
     //homeDisplay.style.display = "none";
     gameDisplay.style.display = "none";
     endPage.style.display = "block";
 });
 
-//add event listener for end page button
-//send user to end page
+//add event listener for end page buttons
+playAgainButton.addEventListener("click", () => {
+    //homeDisplay.style.display = "none";
+    gameDisplay.style.display = "block";
+    endPage.style.display = "none";
+    startGame()
+});
