@@ -15,7 +15,6 @@ const playAgainButton = document.getElementById("play-again-button");
 const goHomeButton = document.getElementById("go-home-button");
 const tracker = document.getElementById("tracker");
 const outroBox = document.getElementById("outro-box");
-//const span = document.getElementsByTagName("span");
 console.log(answerOption);
 
 let next;
@@ -70,47 +69,15 @@ let getQuestion = () => {
 
 // check to see if at end of question set - if so, send to end page// 
 
-//Event listeners for user answer feedback - answer box turns green if correct, red if incorrect//
-
 /*next button to load next question*/
 next = document.getElementById("next-button");
 next.addEventListener("click", loadNextQ);
 
 function loadNextQ () {
-    //alert("you clicked the next button");
-    //questionCounter++;
-    //console.log(questionCounter);
-
-   // let link = document.querySelector('wrong-answer');
-    //if (link) {
-     //   link.removeAttribute('wrong-answer');
-    //}
-
-       // function removeClass () {
-           // let apple = document.getElementsByClassName('answer-option');
-           // apple.classList.remove("correct-answer");
-                //if (document.getElementsByClass('correct-answer')) {
-               // document.getElementsByClass('correct-answer').removeClass("correct-answer");
-           // }
-           // if (document.getElementsByClassName('wrong-answer')) {
-           //     document.getElementsByClassName('wrong-answer').removeClass("wrong-answer");
-           // }
-       // } 
-
-        //removeClass()
-
     questionCounter++;
     console.log(questionCounter);
-
-    //function myFunction() {
-      //  var element = document.getElementById("myDIV");
-       // element.classList.remove("mystyle");
-      //}
-   // document.optionsContainer.classList.remove('wrong-answer');
-
-    //document.getElementById("theID").removeAttribute("class")
-
     getQuestion();
+
     if (questionCounter >= 3) {
         console.log("more than 3");
         nextButton.style.display = "none";
@@ -153,9 +120,8 @@ function scoreTracker() {
 
 startGame();
 
-//scoreTracker();
+//end page - final score feedback, play again & home buttons//
 
-//end page - final score feedback, ?play again//
 /* resets game */
 function resetGame () {
     //document.gameDisplay.reload();
