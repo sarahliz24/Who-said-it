@@ -77,6 +77,7 @@ function loadNextQ () {
     //alert("you clicked the next button");
     questionCounter++;
     console.log(questionCounter);
+
     getQuestion();
     if (questionCounter >= 3) {
         console.log("more than 3");
@@ -96,16 +97,16 @@ function scoreTracker() {
           console.log("you clicked answer " + i);
 
           let answer = currentQuestion.answer;
-          console.log(answer);
+          console.log("you chose answer " + answer);
 
             if (i == (answer - 1)) {
                 score++;
-                console.log(score);
+                console.log("CORRECT! your score is now " + score);
                 answerOption[i].classList.add('correct-answer');   //Add class to display correct answer feedback to user
                 } else {
                     score;
-                    answerOption[i].classList.add('wrong-answer');
-                    console.log(score);
+                    answerOption[i].classList.add('wrong-answer'); //Add class to display wrong answer feedback to user
+                    console.log("WRONG! your score is now " + score);
                 }
     });
     };
