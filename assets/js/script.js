@@ -22,6 +22,7 @@ let questionCounter = 0;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
 const max_questions = 10;
 let score = 0;
+let answer;
 
 /*Lets DOM load before starting play*/
 document.addEventListener("DOMContentLoaded", function() {
@@ -90,23 +91,23 @@ function scoreTracker() {
     score; 
 
     for (let i = 0; i < answerOption.length; i++) {
+        
         answerOption[i].addEventListener("click", function() {
           console.log("you clicked answer " + i);
-        });
 
-    //number = option.dataset["number"];
+          let answer = currentQuestion.answer;
+          console.log(answer);
 
-    if (answerOption[i]) {
-     };
-       /* if (number == answer) {
-            score ++ //increments score
-            //then display correct css
-        } else {
-            //?do nothing
-        } */
-    score++;
-    console.log("score");
-    }
+            if (i == (answer - 1)) {
+                score++;
+                console.log(score);
+                //document.getElementById("MyElement").classList.add('MyClass');   //Add class to display correct answer feedback to user
+                } else {
+                    score;
+                    console.log(score);
+                }
+    });
+    };
 };
 
 scoreTracker();
