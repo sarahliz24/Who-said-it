@@ -171,10 +171,10 @@ h1 {
 
 .correct-answer {
     background-color: green;
-    border-width: 1.5rem;
+    /*border-width: 1.0rem;*/
 }
 
 .wrong-answer {
-    border-color: #df2935;
-    border-width: 1.5rem;
+    background-color: #df2935;
+    /*border-width: 1.0rem;*/
 }

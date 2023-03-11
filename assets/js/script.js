@@ -121,7 +121,6 @@ function scoreTracker() {
     score; 
 
     for (let i = 0; i < answerOption.length; i++) {
-        
         answerOption[i].addEventListener("click", function() {
           console.log("you clicked answer " + i);
 
@@ -146,12 +145,6 @@ function scoreTracker() {
     });
     };
 };
-
-/* var header = $('#header');
-header.addClass('blue');
-setTimeout(function() {
-    header.removeClass('blue');
-}, 4000); */
 
 scoreTracker();
 
