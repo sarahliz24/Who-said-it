@@ -75,7 +75,7 @@ function loadNextQ () {
     questionCounter++;
     console.log(questionCounter);
     getQuestion();
-    if (questionCounter > 3) {
+    if (questionCounter >= 3) {
         console.log("more than 3");
         nextButton.style.display = "none";
         endButton.style.display = "block";
@@ -114,8 +114,10 @@ playAgainButton.addEventListener("click", () => {
     //startGame();
 });
 
+/*sends user to home page when clicking goHomeButton*/
 goHomeButton.addEventListener("click", () => {
     homeDisplay.style.display = "block";
     //gameDisplay.style.display = "block";
     endPage.style.display = "none";
+    resetGame ();
 });
