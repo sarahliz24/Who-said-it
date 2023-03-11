@@ -6,7 +6,7 @@ const optionsContainer = document.getElementsByClassName("options-container");
 let answerOption = Array.from(document.getElementsByClassName("answer-option"));
 const home = document.getElementsByClassName("home");
 const game = document.getElementsByClassName("game");
-const endPage = document.getElementsByClassName("end-page");
+const endPage = document.getElementById("end-page");
 const homeDisplay = document.getElementById("home-display");
 const gameDisplay = document.getElementById("game-display");
 const nextButton = document.getElementById("next-button");
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /* Displays and hides sections as advancing through gameplay via button clicks*/
 letsPlay.addEventListener("click", () => {
     homeDisplay.style.display = "none";
+    //endPage.style.display = "none";
     gameDisplay.style.display = "block";
 });
 
@@ -86,3 +87,11 @@ function loadNextQ () {
 //Code to ensure questions are not repeated during a single game//
 
 //end page - final score feedback, ?play again//
+endButton.addEventListener("click", () => {
+    //homeDisplay.style.display = "none";
+    gameDisplay.style.display = "none";
+    endPage.style.display = "block";
+});
+
+//add event listener for end page button
+//send user to end page

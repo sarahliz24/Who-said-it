@@ -134,3 +134,7 @@ h1 {
     background-color: rgba(253, 202, 64, 0.9);
     display: none;
 }
+
+#end-page {
+    display: none;
+}
