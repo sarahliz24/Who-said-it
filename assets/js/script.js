@@ -153,6 +153,7 @@ scoreTracker();
 function resetGame () {
     //document.gameDisplay.reload();
     questionCounter = 0;
+    score = 0;
     endButton.style.display = "none";
     nextButton.style.display = "block";
     startGame();
