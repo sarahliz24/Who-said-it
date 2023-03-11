@@ -1,6 +1,6 @@
 //Global variables//
 const letsPlay = document.getElementById("lets-play");
-const scoreTracker = document.getElementsByClassName("score-tracker");
+//const scoreTracker = document.getElementsByClassName("score-tracker");
 const questionBox = document.getElementById("question-box");
 const optionsContainer = document.getElementsByClassName("options-container");
 let answerOption = Array.from(document.getElementsByClassName("answer-option"));
@@ -13,13 +13,15 @@ const nextButton = document.getElementById("next-button");
 const endButton = document.getElementById("end-button");
 const playAgainButton = document.getElementById("play-again-button");
 const goHomeButton = document.getElementById("go-home-button");
+//const span = document.getElementsByTagName("span");
+console.log(answerOption);
 
 let next;
 let currentQuestion = {};
 let questionCounter = 0;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
 const max_questions = 10;
-let score;
+let score = 0;
 
 /*Lets DOM load before starting play*/
 document.addEventListener("DOMContentLoaded", function() {
@@ -82,11 +84,32 @@ function loadNextQ () {
     }
 }
 
-//progress tracker//
-
 //score tracker//
+function scoreTracker() {
 
-//Code to ensure questions are not repeated during a single game//
+    score; 
+
+    for (let i = 0; i < answerOption.length; i++) {
+        answerOption[i].addEventListener("click", function() {
+          console.log("you clicked answer " + i);
+        });
+
+    //number = option.dataset["number"];
+
+    if (answerOption[i]) {
+     };
+       /* if (number == answer) {
+            score ++ //increments score
+            //then display correct css
+        } else {
+            //?do nothing
+        } */
+    score++;
+    console.log("score");
+    }
+};
+
+scoreTracker();
 
 //end page - final score feedback, ?play again//
 /* resets game */
