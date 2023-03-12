@@ -16,7 +16,7 @@ const playAgainButton = document.getElementById("play-again-button");
 const goHomeButton = document.getElementById("go-home-button");
 const tracker = document.getElementById("tracker");
 const outroBox = document.getElementById("outro-box");
-console.log(answerOption);
+//console.log(answerOption);
 
 let next;
 let currentQuestion = {};
@@ -24,12 +24,13 @@ let questionCounter = 1;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
 const maxQuestions = 10;
 let score = 0;
-let allowAnswer;
+//let allowAnswer;
 let progress;
+let answer;
 
 /*Lets DOM load before starting play*/
 document.addEventListener("DOMContentLoaded", function() {
-    startGame();
+    //startGame();
 });
 
 /* Displays and hides sections as advancing through gameplay via button clicks*/
@@ -37,21 +38,22 @@ letsPlay.addEventListener("click", () => {
     homeDisplay.style.display = "none";
     //endPage.style.display = "none";
     gameDisplay.style.display = "block";
+    startGame();
 });
 
 /*Starts game*/
 let startGame = () => {
-    randomiser();
+   // randomiser();
     getQuestion();
     console.log(availableQuestions);
     scoreTracker();
 };
 
 /*randomises question array and cut array length to 10 questions, ensuring no repeats*/
-let randomiser = () => {
-    availableQuestions.sort(() => 0.5 - Math.random()); //sorts questions array copy into random order
-    availableQuestions.length = 10; //removes last 15 questions from new array
-};
+//let randomiser = () => {
+   // availableQuestions.sort(() => 0.5 - Math.random()); //sorts questions array copy into random order
+   // availableQuestions.length = 10; //removes last 15 questions from new array
+//};
 
 /*Gets a question set*/
 let getQuestion = () => {
@@ -66,7 +68,7 @@ let getQuestion = () => {
         option.innerText = currentQuestion['option' + number];
     });
 
-    availableQuestions.splice(questionIndex, 1); //removes current question from the avaiable list so no repeats in-game
+    //availableQuestions.splice(questionIndex, 1); //removes current question from the avaiable list so no repeats in-game
 };
 
 // check to see if at end of question set - if so, send to end page// 
@@ -82,12 +84,12 @@ function loadNextQ () {
     getQuestion();
 
     if (questionCounter >= 5) {
-        console.log("more than 3");
+        console.log("more than 5");
         nextButton.style.display = "none";
         endButton.style.display = "inline-block";
     }
 
-    console.log(availableQuestions);
+    //console.log(availableQuestions);
 }
 
 //score tracker//
@@ -98,7 +100,7 @@ function scoreTracker() {
         answerOption[i].addEventListener("click", function listen() {
           console.log("you clicked answer " + i);
 
-        let answer = currentQuestion.answer;
+        answer = currentQuestion.answer;
         console.log("you chose answer " + answer);
 
             if (i == (answer - 1)) {
@@ -111,33 +113,19 @@ function scoreTracker() {
                 }, 1000);  //correct answer display removed after a time 
                 } else {
                     //score;
-                    answerOption[i].classList.add('wrong-answer'); //Add class to display wrong answer feedback to user
+                    //answerOption[i].classList.add('wrong-answer'); //Add class to display wrong answer feedback to user
                     console.log("WRONG! your score is now " + score);
                     tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
+                    answerOption[i].classList.add('wrong-answer');
                     setTimeout(function() {
                         answerOption[i].classList.remove('wrong-answer');
                     }, 1000);  //correct answer display removed after a time 
                 }
-    });
+            });
     }
 }
 
 //end page - final score feedback, play again & home buttons//
-
-/* resets game */
-function resetGame () {
-    //document.gameDisplay.reload();
-    questionCounter = 1;
-    score = 0;
-    endButton.style.display = "none";
-    nextButton.style.display = "inline-block";
-    tracker.innerText = "Welcome! Click on an answer to start playing.";
-    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`)
-    currentQuestion = {};
-    availableQuestions = [...questionsArray]; //allows question array to be rebuilt
-    randomiser();
-    //startGame();
-}
 
 /*send user to rules page when clicking rules button on home page*/
 const rules = document.getElementById("rules-button");
@@ -166,6 +154,23 @@ endButton.addEventListener("click", () => {
         outroBox.innerText = "Your final score is " + score + " out of 10."+"\n"+"\n"+"Wow, you really know a lot of useless facts about celebrities - can you prove you're really great by scoring so high again??"+"\n"+"\n"+"Thanks for playing";
     }
 });
+
+/* resets game */
+function resetGame () {
+    //document.gameDisplay.reload();
+    questionCounter = 1;
+    score = 0;
+    endButton.style.display = "none";
+    nextButton.style.display = "inline-block";
+    tracker.innerText = "Welcome! Click on an answer to start playing";
+    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`)
+    //currentQuestion = {};
+    answer = "";
+    availableQuestions = [...questionsArray]; //allows question array to be rebuilt
+    //randomiser();
+    //startGame();
+    //startGame();
+}
 
 /*sends user to start of game again when clicking playAgainButton*/
 playAgainButton.addEventListener("click", () => {
