@@ -48,7 +48,7 @@ const questionsArray = [{
     answer: "1",
 },
 {
-    question: "I definitely want (him) to be christened, but I do not know into what religion yet",
+    question: "I definitely want (him) to be christened, but I am not sure into what religion yet",
     option1: "Carrie Fisher",
     option2: "Angelina Jolie",
     option3: "David Beckham",
@@ -88,7 +88,7 @@ const questionsArray = [{
     answer: "2",
 },
 {
-    question: "I am sure wherever my Dad is, he is looking down on us - He is not dead, just very condescending",
+    question: "I am sure wherever my Dad is, he is looking down on us - he is not dead, just very condescending",
     option1: "Bobby Robson",
     option2: "Sean Connery",
     option3: "Betty White",
@@ -101,7 +101,7 @@ const questionsArray = [{
     option2: "Jaden Smith",
     option3: "Jack Whitehall",
     option4: "Sean Connery",
-    answer: "4",
+    answer: "1",
 },
 {
     question: "Man … ninjas are kind of cool… I just do not know any personally",
@@ -168,7 +168,7 @@ const questionsArray = [{
     answer: "4",
 },
 {
-    question: "I like women, I don not understand them, but I like them",
+    question: "I like women, I do not understand them, but I like them",
     option1: "Sean Connery",
     option2: "Marilyn Monroe",
     option3: "Donald Trump",
