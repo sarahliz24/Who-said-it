@@ -145,6 +145,13 @@ rules.addEventListener("click", () => {
     rulesDisplay.style.display = "block";
 })
 
+/*send user to home page when clicking go back button on rules page*/
+const goBack = document.getElementById("go-back");
+goBack.addEventListener("click", () => {
+    homeDisplay.style.display = "block";
+    rulesDisplay.style.display = "none";
+})
+
 /*sends user to end page when clicking end button at end of question 10*/
 endButton.addEventListener("click", () => {
     //homeDisplay.style.display = "none";
