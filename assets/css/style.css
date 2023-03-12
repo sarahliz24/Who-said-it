@@ -28,16 +28,16 @@ h1 {
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
     background-color: rgba(253, 202, 64, 0.9);
     box-shadow: 5px 5px 5px #e6e8e6;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
 }
 
 .score-display {
     text-align: center;
     border-radius: 15px;
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 5px 5px 5px #0043DE;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     letter-spacing: 1px;
     background-color: rgba(253, 202, 64, 0.9);
 }
@@ -163,7 +163,7 @@ h1 {
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
     background-color: rgba(253, 202, 64, 0.9);
     box-shadow: 5px 5px 5px #e6e8e6;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 #play-again-button {
