@@ -8,11 +8,11 @@ const questionsArray = [{
     answer: "3",
 },
 {
-    question: "Being a father is the single greatest feeling on earth. Not including those wonderful years I spent without a child, of course",
+    question: "Being a father is the single greatest feeling on earth... not including those wonderful years I spent without a child, of course",
     option1: "Zach Galifianakis",
     option2: "Ryan Reynolds",
     option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
+    option4: "Arnold Schwarz-<br>enegger",
     answer: "2",
 },
 {
@@ -24,7 +24,7 @@ const questionsArray = [{
     answer: "4",
 },
 {
-    question: "I am odd-looking. I sometimes think I look like a funny Muppet",
+    question: "I am odd-looking - I sometimes think I look like a funny muppet",
     option1: "Angelina Jolie",
     option2: "Marilyn Monroe",
     option3: "Betty White",
@@ -48,7 +48,7 @@ const questionsArray = [{
     answer: "1",
 },
 {
-    question: "I definitely want...(him) to be christened, but I do not know into what religion yet",
+    question: "I definitely want (him) to be christened, but I do not know into what religion yet",
     option1: "Carrie Fisher",
     option2: "Angelina Jolie",
     option3: "David Beckham",
@@ -56,11 +56,11 @@ const questionsArray = [{
     answer: "3",
 },
 {
-    question: "We did not underestimate them. They were a lot better than we thought",
+    question: "We did not underestimate them - they were a lot better than we thought",
     option1: "Britney Spears",
     option2: "Donald Trump",
     option3: "David Beckham",
-    option4:  "Bobby Robson",
+    option4: "Bobby Robson",
     answer: "4",
 },
 {
@@ -72,12 +72,12 @@ const questionsArray = [{
     answer: "1",
 },
 {
-    question: "The cool thing about being famous is traveling. I have always wanted to travel across seas, like to Canada and stuff",
+    question: "The cool thing about being famous is travelling - I have always wanted to travel across seas, like to Canada and stuff",
     option1: "Paris Hilton",
     option2: "David Beckham",
     option3: "Britney Spears",
     option4: "Tara Reid",
-    answer: "2",
+    answer: "3",
 },
 {
     question: "It is really hard to maintain a one-on-one relationship if the other person is not going to allow me to be with other people",
@@ -88,7 +88,7 @@ const questionsArray = [{
     answer: "2",
 },
 {
-    question: "I am sure wherever my Dad is, he is looking down on us. He is not dead, just very condescending",
+    question: "I am sure wherever my Dad is, he is looking down on us - He is not dead, just very condescending",
     option1: "Bobby Robson",
     option2: "Sean Connery",
     option3: "Betty White",
@@ -104,7 +104,7 @@ const questionsArray = [{
     answer: "4",
 },
 {
-    question: "Man … ninjas are kind of cool … I just do not know any personally",
+    question: "Man … ninjas are kind of cool… I just do not know any personally",
     option1: "Jaden Smith",
     option2: "Albert Einstein",
     option3: "Kanye West",
@@ -112,7 +112,7 @@ const questionsArray = [{
     answer: "3",
 },
 {
-    question: "Do you know where to find marble conference tables? I am looking to have a conference…not until I get the table though",
+    question: "Do you know where to find marble conference tables? I am looking to have a conference… not until I get the table though",
     option1: "David Beckham",
     option2: "Axel Rose",
     option3: "Donald Trump",
@@ -144,15 +144,15 @@ const questionsArray = [{
     answer: "2",
 },
 {
-    question: "I have a swagger coach that helps me and teaches me different swaggerific things to do…",
+    question: "I have a swagger coach that helps me and teaches me different swaggerific things to do",
     option1: "Jaden Smith",
     option2: "Kanye West",
     option3: "Donald Trump",
-    option4:"Justin Bieber",
+    option4: "Justin Bieber",
     answer: "4",
 },
 {
-    question: "The secret to a happy marriage? Do whatever your wife tells you... Yes, dear... And breathe",
+    question: "The secret to a happy marriage? Do whatever your wife tells you - Yes, dear... and breathe",
     option1: "Denzil Washington",
     option2: "Jack Whitehall",
     option3: "Donald Trump",
@@ -179,16 +179,16 @@ const questionsArray = [{
     question: "I think gay marriage is something that should be between a man and a woman",
     option1: "Britney Spears",
     option2: "Donald Trump",
+    option3: "Kanye West",
     option4: "Arnold Schwarzenegger",
     answer: "4",
 },
 {
-    question: "Smoking kills. If you are killed, you are lost a very important part of your life",
+    question: "Smoking kills - if you are killed, you have lost a very important part of your life",
     option1: "Kim Kardashian",
     option2: "Brooke Shields",
     option3: "Marilyn Monroe",
     option4: "Paris Hilton",
-    options: "Marilyn Monroe",
     answer: "2",
 },
 {

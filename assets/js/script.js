@@ -133,7 +133,7 @@ function resetGame () {
     nextButton.style.display = "inline-block";
     tracker.innerText = "Welcome! Click on an answer to start playing.";
     currentQuestion = {};
-    startGame();
+    //startGame();
 }
 
 /*sends user to end page when clicking end button at end of question 10*/
@@ -155,6 +155,7 @@ playAgainButton.addEventListener("click", () => {
     //homeDisplay.style.display = "none";
     gameDisplay.style.display = "block";
     endPage.style.display = "none";
+    console.log("you clicked the play again button");
     resetGame ();
     //startGame();
 });
@@ -164,5 +165,6 @@ goHomeButton.addEventListener("click", () => {
     homeDisplay.style.display = "block";
     //gameDisplay.style.display = "block";
     endPage.style.display = "none";
+    console.log("You clicked the go home  button");
     resetGame ();
 });
