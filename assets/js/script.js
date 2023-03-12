@@ -56,13 +56,15 @@ let getQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length); 
     currentQuestion = availableQuestions[questionIndex]; //ensures random question from availableQuestions list is selected as currentQuestion
     
-    questionBox.innerText = currentQuestion.question; //loads selected question into correct area for user to read
+    questionBox.innerText = currentQuestion.question;
     console.log(questionBox);
 
     answerOption.forEach((option) => {
         const number = option.dataset.number;
         option.innerText = currentQuestion['option' + number];
     });
+
+    availableQuestions.splice(questionIndex, 1); //removes current question from the avaiable list so no repeats in-game
 };
 
 // check to see if at end of question set - if so, send to end page// 
@@ -130,6 +132,8 @@ function resetGame () {
     nextButton.style.display = "inline-block";
     tracker.innerText = "Welcome! Click on an answer to start playing.";
     currentQuestion = {};
+    availableQuestions = [...questionsArray]; //allows question array to be rebuilt
+    randomiser();
     //startGame();
 }
 
