@@ -43,13 +43,13 @@ let startGame = () => {
     getQuestion();
     console.log(availableQuestions);
     scoreTracker();
-}
+};
 
 /*randomises question array and cut array length to 10 questions, ensuring no repeats*/
 let randomiser = () => {
     availableQuestions.sort((a, b) => 0.5 - Math.random()); //sorts questions array copy into random order
     availableQuestions.length = 10; //removes last 15 questions from new array
-}
+};
 
 /*Gets a question set*/
 let getQuestion = () => {
@@ -62,8 +62,8 @@ let getQuestion = () => {
     answerOption.forEach((option) => {
         const number = option.dataset["number"];
         option.innerText = currentQuestion['option' + number];
-    })
-}
+    });
+};
 
 // startGame ();
 
@@ -115,8 +115,8 @@ function scoreTracker() {
                     }, 1000);  //correct answer display removed after a time 
                 }
     });
-    };
-};
+    }
+}
 
 startGame();
 
@@ -129,7 +129,7 @@ function resetGame () {
     score = 0;
     endButton.style.display = "none";
     nextButton.style.display = "inline-block";
-    tracker.innerText = "Welcome! Click on an answer to start playing."
+    tracker.innerText = "Welcome! Click on an answer to start playing.";
     currentQuestion = {};
     startGame();
 }
