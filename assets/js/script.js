@@ -47,16 +47,16 @@ let startGame = () => {
 
 /*randomises question array and cut array length to 10 questions, ensuring no repeats*/
 let randomiser = () => {
-    availableQuestions.sort((a, b) => 0.5 - Math.random()); //sorts questions array copy into random order
+    availableQuestions.sort(() => 0.5 - Math.random()); //sorts questions array copy into random order
     availableQuestions.length = 10; //removes last 15 questions from new array
 };
 
 /*Gets a question set*/
 let getQuestion = () => {
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length); 
+    currentQuestion = availableQuestions[questionIndex]; //ensures random question from availableQuestions list is selected as currentQuestion
     
-    questionBox.innerText = currentQuestion.question;
+    questionBox.innerText = currentQuestion.question; //loads selected question into correct area for user to read
     console.log(questionBox);
 
     answerOption.forEach((option) => {
@@ -65,7 +65,7 @@ let getQuestion = () => {
     });
 };
 
-// startGame ();
+//startGame ();
 
 // check to see if at end of question set - if so, send to end page// 
 
@@ -83,12 +83,14 @@ function loadNextQ () {
         nextButton.style.display = "none";
         endButton.style.display = "block";
     }
+
+    console.log(availableQuestions);
 }
 
 //score tracker//
 function scoreTracker() {
 
-    score; 
+    //score; 
 
     for (let i = 0; i < answerOption.length; i++) {
         answerOption[i].addEventListener("click", function() {
@@ -106,7 +108,7 @@ function scoreTracker() {
                     answerOption[i].classList.remove('correct-answer');
                 }, 1000);  //correct answer display removed after a time 
                 } else {
-                    score;
+                    //score;
                     answerOption[i].classList.add('wrong-answer'); //Add class to display wrong answer feedback to user
                     console.log("WRONG! your score is now " + score);
                     tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
@@ -118,7 +120,7 @@ function scoreTracker() {
     }
 }
 
-startGame();
+//startGame();
 
 //end page - final score feedback, play again & home buttons//
 
