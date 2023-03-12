@@ -81,7 +81,7 @@ function loadNextQ () {
     if (questionCounter >= 3) {
         console.log("more than 3");
         nextButton.style.display = "none";
-        endButton.style.display = "block";
+        endButton.style.display = "inline-block";
     }
 
     console.log(availableQuestions);
