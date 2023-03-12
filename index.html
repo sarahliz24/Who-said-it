@@ -1,80 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Who said it quiz">
-    <meta name="keywords" content="quiz, celebrity quotes, trivia">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Who said it quiz">
+   <meta name="keywords" content="quiz, celebrity quotes, trivia">
 
-    <!-- Google fonts and font awesome-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Bangers&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/2a1b2bada9.css" crossorigin="anonymous"> -->
-    <script src="https://kit.fontawesome.com/2a1b2bada9.js" crossorigin="anonymous"></script>
+   <!-- Google fonts and font awesome-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Antic&family=Bangers&display=swap" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/2a1b2bada9.css" crossorigin="anonymous"> -->
+   <script src="https://kit.fontawesome.com/2a1b2bada9.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="#">
-    <title>Who said it quiz</title>
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="shortcut icon" href="#">
+   <title>Who said it quiz</title>
 </head>
 <body>
-     <!-- Heading section-->
-     <section>
-        <h1>Who said it?</h1>
-     </section>
+   <!-- Heading section-->
+   <section>
+      <h1>Who said it?</h1>
+   </section>
     
-    <!-- Home page-->
-    <section id="home-display" class="home">
-         <div class="intro-box">
-            <h2>Got some time to kill?</h2>
-            <h2>Want to prove your superior knowledge of the crazy things celebrities have said?</h2>
-            <h2>Well, you've come to the right place!</h2>
-         </div>
-         <div>
-            <button type="button" id="lets-play" class="play-button" data-type="play">
-                  Let's play!
-            </button>
-         </div>
-         <div>
-            <button type="button" id="rules" class="rules-button" data-type="rules">
-                  Rules
-            </button>
-         </div>
-    </section>
+   <!-- Home page-->
+   <section id="home-display" class="home">
+      <div class="intro-box">
+         <h2>Got some time to kill?</h2>
+         <h2>Want to prove your superior knowledge of the crazy things celebrities have said?</h2>
+         <h2>Well, you've come to the right place!</h2>
+      </div>
+      <div>
+         <button type="button" id="lets-play" class="play-button" data-type="play">
+            Let's play!
+         </button>
+      </div>
+      <div>
+         <button type="button" id="rules" class="rules-button" data-type="rules">
+            Rules
+      </button>
+      </div>
+   </section>
 
-     <!-- Questions section-->
-     <section id="game-display" class="game">
-         <div class="score-display">
-            <h2 id="progress">Question 1 / 10</h2>
-            <h3 id="tracker">Welcome to your first question - Click on an answer to start playing</h3>
-         </div>
-         <div id="question-box">
-            question goes here, this is a quite long funny question right here
-         </div>
-         <div class="options-container">
-            <span class="answer-option" data-number="1">test</span>
-            <span class="answer-option" data-number="2">test</span>
-            <span class="answer-option" data-number="3">test</span>
-            <span class="answer-option" data-number="4">test</span>
-         </div>
-         <div>
-            <button id="next-button" data-type="next">next question</button>
-         </div>
-         <div>
-            <button id="end-button" data-type="end">Go to end page</button>
-         </div>
-      </section>    
+   <!-- Rules section-->
+   <section id="rules-display">
+      <div>
+         <h2 id="rules-title">Rules of the game</h2>
+         <ul>
+            <li>There are 10 questions in each game</li>
+            <br>
+            <li>Click on the best answer to see if you're correct</li>
+            <br>
+            <li>Click on the next question button to move to the next question</li>
+            <br>
+            <li>After 10 questions you'll see your final score</li>
+            <br>
+            <li>You can then choose to play again - you'll get a new set of questions to again prove your superior knowledge... or will you need to play again to improve??</li>
+         </ul>
+      </div>
+      <div>
+         <button id="go-back" data-type="home">Go back</button>
+      </div>
+   </section>
+
+   <!-- Questions section-->
+   <section id="game-display" class="game">
+      <div class="score-display">
+         <h2 id="progress">Question 1 / 10</h2>
+         <h3 id="tracker">Welcome to your first question - Click on an answer to start playing</h3>
+      </div>
+      <div id="question-box">
+         question goes here, this is a quite long funny question right here
+      </div>
+      <div class="options-container">
+         <span class="answer-option" data-number="1">test</span>
+         <span class="answer-option" data-number="2">test</span>
+         <span class="answer-option" data-number="3">test</span>
+         <span class="answer-option" data-number="4">test</span>
+      </div>
+      <div>
+         <button id="next-button" data-type="next">next question</button>
+      </div>
+      <div>
+         <button id="end-button" data-type="end">Go to end page</button>
+      </div>
+   </section>    
    
-    <!-- Final page - scores, ?play again-->
-    <section id="end-page">
-         <h2 id="outro-box">Score section with message to use</h2>
-         <div>
-            <button id="play-again-button" data-type="again">Play again?</button>
-         </div>
-         <div>
-            <button id="go-home-button" data-type="home">Go home</button>
-         </div>
+   <!-- Final page - scores, ?play again-->
+   <section id="end-page">
+      <h2 id="outro-box">Score section with message to use</h2>
+      <div>
+         <button id="play-again-button" data-type="again">Play again?</button>
+      </div>
+      <div>
+         <button id="go-home-button" data-type="home">Go home</button>
+      </div>
     </section>
 
     <script src="assets/js/data.js"></script>

@@ -8,6 +8,7 @@ const home = document.getElementsByClassName("home");
 const game = document.getElementsByClassName("game");
 const endPage = document.getElementById("end-page");
 const homeDisplay = document.getElementById("home-display");
+const rulesDisplay = document.getElementById("rules-display");
 const gameDisplay = document.getElementById("game-display");
 const nextButton = document.getElementById("next-button");
 const endButton = document.getElementById("end-button");
@@ -121,8 +122,6 @@ function scoreTracker() {
     }
 }
 
-//startGame();
-
 //end page - final score feedback, play again & home buttons//
 
 /* resets game */
@@ -138,6 +137,13 @@ function resetGame () {
     randomiser();
     //startGame();
 }
+
+/*send user to rules page when clicking rules button on home page*/
+const rules = document.getElementById("rules");
+rules.addEventListener("click", () => {
+    homeDisplay.style.display = "none";
+    rulesDisplay.style.display = "block";
+})
 
 /*sends user to end page when clicking end button at end of question 10*/
 endButton.addEventListener("click", () => {
