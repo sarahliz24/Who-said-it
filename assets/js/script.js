@@ -21,9 +21,10 @@ let next;
 let currentQuestion = {};
 let questionCounter = 0;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
-const max_questions = 10;
+const maxQuestions = 10;
 let score = 0;
 let allowAnswer;
+let progress;
 
 /*Lets DOM load before starting play*/
 document.addEventListener("DOMContentLoaded", function() {
@@ -75,6 +76,7 @@ next.addEventListener("click", loadNextQ);
 
 function loadNextQ () {
     questionCounter++;
+    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`)
     console.log(questionCounter);
     getQuestion();
 
