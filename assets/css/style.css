@@ -51,11 +51,19 @@ h1 {
     text-align: center;
     border-radius: 15px;
     display: inline-block;
-    padding: 5px;
+    padding: 1% 5%;
     box-shadow: 5px 5px 5px #0043DE;
     /*font-size: 1.2em;*/
     letter-spacing: 1px;
     background-color: rgba(253, 202, 64, 0.9);
+}
+
+#progress {
+    margin-top: 1%;
+}
+
+#tracker {
+    margin-bottom: 1%;
 }
 
 /*  'Let's play!' button style*/
@@ -70,7 +78,7 @@ h1 {
     font-family: 'Bangers', cursive;
     font-size: 2.5em;
     letter-spacing: 1px;
-    margin-top: 25%;
+    margin-top: 15%;
 }
 
 /*  changes 'Let's play!' button font and shadow colours on mouse hover */
@@ -106,7 +114,7 @@ h1 {
     font-family: 'Bangers', cursive;
     font-size: 2.5em;
     letter-spacing: 1px;
-    margin-top: 5%;
+    margin-top: 15%;
     background-color: rgba(253, 202, 64, 0.9);
     display: inline-block;
 }
@@ -124,7 +132,7 @@ h1 {
     font-size: 2em;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 5%;
 }
 
 /*  Set flexbox mode for question-options container*/
@@ -173,7 +181,7 @@ h1 {
 
 #home-display {
     display: block;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 #rules-display {
@@ -182,7 +190,7 @@ h1 {
 
 #game-display {
     display: none;
-    margin-top: 15%;
+    margin-top: 3%;
 }
 
 #end-button {
