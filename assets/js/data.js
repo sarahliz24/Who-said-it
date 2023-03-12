@@ -4,7 +4,7 @@ const questionsArray = [{
     option1: "Ryan Reynolds",
     option2: "Angelina Jolie",
     option3: "Bill Murray",
-    option4: "Arnold Schwarzenegger",
+    option4: "Tara Reid",
     answer: "3",
 },
 {
@@ -12,7 +12,7 @@ const questionsArray = [{
     option1: "Zach Galifianakis",
     option2: "Ryan Reynolds",
     option3: "Bill Murray",
-    option4: "Arnold Schwarz-<br>enegger",
+    option4: "Kanye West",
     answer: "2",
 },
 {
@@ -172,7 +172,7 @@ const questionsArray = [{
     option1: "Sean Connery",
     option2: "Marilyn Monroe",
     option3: "Donald Trump",
-    option4: "Arnold Schwarzenegger",
+    option4: "Axel Rose",
     answer: "1",
 },
 {
@@ -180,7 +180,7 @@ const questionsArray = [{
     option1: "Britney Spears",
     option2: "Donald Trump",
     option3: "Kanye West",
-    option4: "Arnold Schwarzenegger",
+    option4: "Arnie",
     answer: "4",
 },
 {
@@ -189,6 +189,7 @@ const questionsArray = [{
     option2: "Brooke Shields",
     option3: "Marilyn Monroe",
     option4: "Paris Hilton",
+
     answer: "2",
 },
 {
