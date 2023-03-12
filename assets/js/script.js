@@ -20,7 +20,7 @@ console.log(answerOption);
 
 let next;
 let currentQuestion = {};
-let questionCounter = 0;
+let questionCounter = 1;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
 const maxQuestions = 10;
 let score = 0;
@@ -81,7 +81,7 @@ function loadNextQ () {
     console.log(questionCounter);
     getQuestion();
 
-    if (questionCounter >= 3) {
+    if (questionCounter >= 5) {
         console.log("more than 3");
         nextButton.style.display = "none";
         endButton.style.display = "inline-block";
@@ -127,11 +127,12 @@ function scoreTracker() {
 /* resets game */
 function resetGame () {
     //document.gameDisplay.reload();
-    questionCounter = 0;
+    questionCounter = 1;
     score = 0;
     endButton.style.display = "none";
     nextButton.style.display = "inline-block";
     tracker.innerText = "Welcome! Click on an answer to start playing.";
+    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`)
     currentQuestion = {};
     availableQuestions = [...questionsArray]; //allows question array to be rebuilt
     randomiser();
