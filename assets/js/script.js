@@ -139,7 +139,7 @@ function resetGame () {
 }
 
 /*send user to rules page when clicking rules button on home page*/
-const rules = document.getElementById("rules");
+const rules = document.getElementById("rules-button");
 rules.addEventListener("click", () => {
     homeDisplay.style.display = "none";
     rulesDisplay.style.display = "block";
