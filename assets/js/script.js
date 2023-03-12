@@ -23,7 +23,7 @@ let questionCounter = 0;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
 const max_questions = 10;
 let score = 0;
-let answer;
+let allowAnswer;
 
 /*Lets DOM load before starting play*/
 document.addEventListener("DOMContentLoaded", function() {
@@ -60,12 +60,10 @@ let getQuestion = () => {
     console.log(questionBox);
 
     answerOption.forEach((option) => {
-        const number = option.dataset["number"];
+        const number = option.dataset.number;
         option.innerText = currentQuestion['option' + number];
     });
 };
-
-//startGame ();
 
 // check to see if at end of question set - if so, send to end page// 
 
@@ -90,14 +88,13 @@ function loadNextQ () {
 //score tracker//
 function scoreTracker() {
 
-    //score; 
-
     for (let i = 0; i < answerOption.length; i++) {
-        answerOption[i].addEventListener("click", function() {
+       
+        answerOption[i].addEventListener("click", function listen() {
           console.log("you clicked answer " + i);
 
-          let answer = currentQuestion.answer;
-          console.log("you chose answer " + answer);
+        let answer = currentQuestion.answer;
+        console.log("you chose answer " + answer);
 
             if (i == (answer - 1)) {
                 score++;
