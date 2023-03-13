@@ -20,15 +20,15 @@ h1 {
 
 /* Intro box style */ 
 .intro-box {
-    width: fit-content;
-    margin: auto;
-    border: solid #e6e8e6 3px;
-    border-radius: 15px;
     /* converted #fdca40 to rgba to allow setting of opacity; 
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
     background-color: rgba(253, 202, 64, 0.9);
+    border: solid #e6e8e6 3px;
+    border-radius: 15px;
     box-shadow: 5px 5px 5px #e6e8e6;
+    margin: auto;
     /*font-size: 1.2em;*/
+    width: fit-content;
 }
 
 #rules-title {
@@ -36,15 +36,15 @@ h1 {
 }
 
 #rules-box {
-    text-align: left;
+    background-color: rgba(253, 202, 64, 0.9);
     border-radius: 15px;
-    display: inline-block;
-    padding: 5px;
     box-shadow: 5px 5px 5px #0043DE;
+    display: inline-block;
     /*font-size: 1.2em;*/
     letter-spacing: 1px;
-    background-color: rgba(253, 202, 64, 0.9);
     margin-top: 15%;
+    padding: 5px;
+    text-align: left;
 }
 
 .score-display {
