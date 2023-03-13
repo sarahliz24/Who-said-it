@@ -96,7 +96,6 @@ next.addEventListener("click", () => {
     if (acceptingAnswers) {
         console.log("you forgot!!!")
         setTimeout(function () {
-            //alert("you forgot to answer a question");
             reminder.style.display = "inline-block"; 
         }, 500);
     } else {
@@ -179,14 +178,21 @@ goBack.addEventListener("click", () => {
 
 /*sends user to end page when clicking end button at end of question 10*/
 endButton.addEventListener("click", () => {
-    gameDisplay.style.display = "none";
-    endPage.style.display = "block";
-    if (score <= 4) {
-        outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "You tried hard, but you really need to brush up on your celebrity knowledge!!" + "\n" + "\n" + "Thanks for playing";
-    } else if (score < 7) {
-        outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "You were decidedly average, maybe playing again will help??" + "\n" + "\n" + "Thanks for playing";
+    if (acceptingAnswers) {
+        setTimeout(function () {
+            reminder.style.display = "inline-block"; 
+        }, 500);
     } else {
-        outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "Wow, you really know a lot of useless facts about celebrities - can you prove you're really great by scoring so high again??" + "\n" + "\n" + "Thanks for playing";
+        acceptingAnswers = true;
+        gameDisplay.style.display = "none";
+        endPage.style.display = "block";
+            if (score <= 4) {
+                outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "You tried hard, but you really need to brush up on your celebrity knowledge!!" + "\n" + "\n" + "Thanks for playing";
+            } else if (score < 7) {
+                outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "You were decidedly average, maybe playing again will help??" + "\n" + "\n" + "Thanks for playing";
+            } else {
+                outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "Wow, you really know a lot of useless facts about celebrities - can you prove you're really great by scoring so high again??" + "\n" + "\n" + "Thanks for playing";
+            }
     }
 });
 
