@@ -27,6 +27,7 @@ let score = 0;
 //let allowAnswer;
 let progress;
 let answer;
+let acceptingAnswers = true;
 
 /*Lets DOM load before starting play*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -91,6 +92,7 @@ next = document.getElementById("next-button");
 next.addEventListener("click", loadNextQ);
 
 function loadNextQ() {
+    acceptingAnswers = true;
     questionCounter++;
     progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);
     console.log(questionCounter);
@@ -109,27 +111,32 @@ function scoreTracker() {
     for (let i = 0; i < answerOption.length; i++) {
 
         answerOption[i].addEventListener("click", function listen() {
-            console.log("you clicked answer " + i);
-            console.log(listen);
 
-            answer = currentQuestion.answer;
-            console.log("you chose answer " + answer);
+            if (acceptingAnswers) {
+                acceptingAnswers = false
 
-            if (i == (answer - 1)) {
-                score++;
-                console.log("CORRECT! your score is now " + score);
-                tracker.innerText = ("CORRECT! your score is now " + score + " out of 10");
-                answerOption[i].classList.add('correct-answer'); //Add class to display correct answer feedback to user
-                setTimeout(function () {
-                    answerOption[i].classList.remove('correct-answer');
-                }, 1000); //correct answer display removed after a time
-            } else {
-                console.log("WRONG! your score is now " + score);
-                tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
-                answerOption[i].classList.add('wrong-answer');
-                setTimeout(function () {
-                    answerOption[i].classList.remove('wrong-answer');
-                }, 1000); //correct answer display removed after a time 
+                console.log("you clicked answer " + i);
+                console.log(listen);
+
+                answer = currentQuestion.answer;
+                console.log("you chose answer " + answer);
+
+                if (i == (answer - 1)) {
+                    score++;
+                    console.log("CORRECT! your score is now " + score);
+                    tracker.innerText = ("CORRECT! your score is now " + score + " out of 10");
+                    answerOption[i].classList.add('correct-answer'); //Add class to display correct answer feedback to user
+                    setTimeout(function () {
+                        answerOption[i].classList.remove('correct-answer');
+                    }, 1000); //correct answer display removed after a time
+                } else {
+                    console.log("WRONG! your score is now " + score);
+                    tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
+                    answerOption[i].classList.add('wrong-answer');
+                    setTimeout(function () {
+                        answerOption[i].classList.remove('wrong-answer');
+                    }, 1000); //correct answer display removed after a time 
+                }
             }
         });
         
