@@ -22,7 +22,7 @@ let next;
 let currentQuestion = {};
 let questionCounter = 1;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
-const maxQuestions = 10;
+//const maxQuestions = 10;
 let score = 0;
 //let allowAnswer;
 let progress;
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Displays and hides sections as advancing through gameplay via button clicks*/
 letsPlay.addEventListener("click", () => {
     homeDisplay.style.display = "none";
-    //endPage.style.display = "none";
     gameDisplay.style.display = "block";
     resetGame();
     startGame();
@@ -102,7 +101,7 @@ function loadNextQ() {
         nextButton.style.display = "none";
         endButton.style.display = "inline-block";
     }
-}
+};
 
 //score tracker//
 function scoreTracker() {
@@ -111,6 +110,7 @@ function scoreTracker() {
 
         answerOption[i].addEventListener("click", function listen() {
             console.log("you clicked answer " + i);
+            console.log(listen);
 
             answer = currentQuestion.answer;
             console.log("you chose answer " + answer);
@@ -122,7 +122,7 @@ function scoreTracker() {
                 answerOption[i].classList.add('correct-answer'); //Add class to display correct answer feedback to user
                 setTimeout(function () {
                     answerOption[i].classList.remove('correct-answer');
-                }, 1000); //correct answer display removed after a time 
+                }, 1000); //correct answer display removed after a time
             } else {
                 console.log("WRONG! your score is now " + score);
                 tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
@@ -130,12 +130,12 @@ function scoreTracker() {
                 setTimeout(function () {
                     answerOption[i].classList.remove('wrong-answer');
                 }, 1000); //correct answer display removed after a time 
-            
-                for (let i = 0; i < answerOption.length; i++) {
-                    answerOption[i].removeEventListener("click", scoreTracker)
-                };
             }
         });
+        
+        /*for (let i = 0; i < answerOption.length; i++) {
+            answerOption[i].removeEventListener("click", listen)
+            }; */   //intended to remove event listener so user cannot select further answers in same question - ?scope issues causing failure
     }
 }
 
@@ -181,5 +181,5 @@ goHomeButton.addEventListener("click", () => {
     homeDisplay.style.display = "block";
     endPage.style.display = "none";
     console.log("You clicked the go home  button");
-    return window.location.assign('index.html')
+    return window.location.assign('index.html');
 });

@@ -264,3 +264,10 @@ h1 {
     background-color: #df2935;
     /*border-width: 1.0rem;*/
 }
+
+/* FOR SCREEN SIZES from 577 - 900px wide */
+@media screen and (min-width: 577px) {
+    /* controls flex box size so that answerOption boxes stay in 2x2 layout */
+    .options-container {
+        flex-flow: row;
+    }
