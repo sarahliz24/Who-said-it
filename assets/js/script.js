@@ -139,10 +139,10 @@ function scoreTracker() {
                 }
             }
         });
-        
+
         /*for (let i = 0; i < answerOption.length; i++) {
             answerOption[i].removeEventListener("click", listen)
-            }; */   //intended to remove event listener so user cannot select further answers in same question - ?scope issues causing failure
+            }; */ //intended to remove event listener so user cannot select further answers in same question - ?scope issues causing failure
     }
 }
 
