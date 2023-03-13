@@ -16,6 +16,7 @@ const playAgainButton = document.getElementById("play-again-button");
 const goHomeButton = document.getElementById("go-home-button");
 const tracker = document.getElementById("tracker");
 const outroBox = document.getElementById("outro-box");
+const reminder = document.getElementById("reminder");
 //console.log(answerOption);
 
 let next;
@@ -89,9 +90,23 @@ let getQuestion = () => {
 
 /*next button to load next question*/
 next = document.getElementById("next-button");
-next.addEventListener("click", loadNextQ);
+// next.addEventListener("click", loadNextQ);
+
+next.addEventListener("click", () => {
+    if (acceptingAnswers) {
+        console.log("you forgot!!!")
+        setTimeout(function () {
+            //alert("you forgot to answer a question");
+            reminder.style.display = "inline-block"; 
+        }, 500);
+    } else {
+        //acceptingAnswers = true;
+        loadNextQ();
+    }
+});
 
 function loadNextQ() {
+    reminder.style.display = "none"; 
     acceptingAnswers = true;
     questionCounter++;
     progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);

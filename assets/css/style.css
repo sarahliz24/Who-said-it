@@ -1,7 +1,8 @@
-/* GLOBAL STYLE*/ 
+/* GLOBAL STYLE*/
 body {
     background: url('../images/background.jpg');
-    background-color: #fdca40; /*sets background colour in case image does not load*/ 
+    background-color: #fdca40;
+    /*sets background colour in case image does not load*/
     background-size: cover;
     color: #0043DE;
     font-family: 'Antic', sans-serif;
@@ -20,7 +21,7 @@ h1 {
 
 /*TEXT BOXES*/
 
-/* Intro box style */ 
+/* Intro box style */
 .intro-box {
     /* converted #fdca40 to rgba to allow setting of opacity; 
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
@@ -107,6 +108,21 @@ h1 {
     margin: 5%;
 }
 
+#reminder {
+    background-color: rgba(253, 202, 64, 0.9);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #df2935;
+    color: #df2935;
+    display: none;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    margin-top: 1%;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 2px 2px #e6e8e6;
+}
+
 #outro-box {
     width: fit-content;
     margin: auto;
@@ -117,10 +133,42 @@ h1 {
     background-color: rgba(253, 202, 64, 0.9);
     box-shadow: 5px 5px 5px #e6e8e6;
     font-size: 1.4em;
+    letter-spacing: 1px;
 }
 
 /* BUTTONS*/
 /*  'Let's play!' button style*/
+
+.white-button {
+    background-color: #e6e8e6;
+    box-shadow: 5px 5px 5px #0043DE;
+    border-radius: 15px;
+    border: solid #e6e8e6 3px;
+    color: #df2935;
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-top: 15%;
+    padding: 20px;
+    text-align: center;
+}
+
+.red-button {
+    background-color: rgba(253, 202, 64, 0.9);
+    border-radius: 15px;
+    border: solid #e6e8e6 3px;
+    box-shadow: 5px 5px 5px #0043DE;
+    /*background-color: #e6e8e6;*/
+    color: #df2935;
+    display: inline-block;
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-top: 15%;
+    padding: 20px;
+    text-align: center;
+}
+
 .play-button {
     background-color: #e6e8e6;
     box-shadow: 5px 5px 5px #0043DE;
@@ -275,8 +323,9 @@ h1 {
 
 /* FOR SCREEN SIZES from 577 - 900px wide */
 @media screen and (min-width: 577px) {
+
     /* controls flex box size so that answerOption boxes stay in 2x2 layout */
     .options-container {
         flex-flow: row;
     }
-} 
+}
