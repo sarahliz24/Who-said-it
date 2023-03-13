@@ -81,7 +81,8 @@ let getQuestion = () => {
         option.innerText = currentQuestion['option' + number];
     });
 
-    //availableQuestions.splice(questionIndex, 1); //removes current question from the avaiable list so no repeats in-game
+    availableQuestions.splice(questionIndex, 1);
+    console.log(availableQuestions); //removes current question from the avaiable list so no repeats in-game
 };
 
 // check to see if at end of question set - if so, send to end page// 
@@ -123,14 +124,16 @@ function scoreTracker() {
                     answerOption[i].classList.remove('correct-answer');
                 }, 1000); //correct answer display removed after a time 
             } else {
-                //score;
-                //answerOption[i].classList.add('wrong-answer'); //Add class to display wrong answer feedback to user
                 console.log("WRONG! your score is now " + score);
                 tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
                 answerOption[i].classList.add('wrong-answer');
                 setTimeout(function () {
                     answerOption[i].classList.remove('wrong-answer');
                 }, 1000); //correct answer display removed after a time 
+            
+                for (let i = 0; i < answerOption.length; i++) {
+                    answerOption[i].removeEventListener("click", scoreTracker)
+                };
             }
         });
     }
