@@ -2,10 +2,10 @@
 const letsPlay = document.getElementById("lets-play");
 //const scoreTracker = document.getElementsByClassName("score-tracker");
 const questionBox = document.getElementById("question-box");
-const optionsContainer = document.getElementsByClassName("options-container");
+//const optionsContainer = document.getElementsByClassName("options-container");
 let answerOption = Array.from(document.getElementsByClassName("answer-option"));
-const home = document.getElementsByClassName("home");
-const game = document.getElementsByClassName("game");
+//const home = document.getElementsByClassName("home");
+//const game = document.getElementsByClassName("game");
 const endPage = document.getElementById("end-page");
 const homeDisplay = document.getElementById("home-display");
 const rulesDisplay = document.getElementById("rules-display");
@@ -50,7 +50,7 @@ function resetGame() {
     endButton.style.display = "none";
     nextButton.style.display = "inline-block";
     tracker.innerText = "Welcome! Click on an answer to start playing";
-    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`)
+    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);
     answer = "";
     availableQuestions = [...questionsArray]; //allows question array to be rebuilt
 }
@@ -92,7 +92,7 @@ next.addEventListener("click", loadNextQ);
 
 function loadNextQ() {
     questionCounter++;
-    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`)
+    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);
     console.log(questionCounter);
     getQuestion();
 
@@ -143,14 +143,14 @@ const rules = document.getElementById("rules-button");
 rules.addEventListener("click", () => {
     homeDisplay.style.display = "none";
     rulesDisplay.style.display = "block";
-})
+});
 
 /*send user to home page when clicking go back button on rules page*/
 const goBack = document.getElementById("go-back");
 goBack.addEventListener("click", () => {
     homeDisplay.style.display = "block";
     rulesDisplay.style.display = "none";
-})
+});
 
 /*sends user to end page when clicking end button at end of question 10*/
 endButton.addEventListener("click", () => {
