@@ -178,4 +178,5 @@ goHomeButton.addEventListener("click", () => {
     homeDisplay.style.display = "block";
     endPage.style.display = "none";
     console.log("You clicked the go home  button");
+    return window.location.assign('index.html')
 });
