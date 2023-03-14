@@ -1,11 +1,7 @@
 //Global variables//
 const letsPlay = document.getElementById("lets-play");
-//const scoreTracker = document.getElementsByClassName("score-tracker");
 const questionBox = document.getElementById("question-box");
-//const optionsContainer = document.getElementsByClassName("options-container");
 let answerOption = Array.from(document.getElementsByClassName("answer-option"));
-//const home = document.getElementsByClassName("home");
-//const game = document.getElementsByClassName("game");
 const endPage = document.getElementById("end-page");
 const homeDisplay = document.getElementById("home-display");
 const rulesDisplay = document.getElementById("rules-display");
@@ -17,7 +13,6 @@ const goHomeButton = document.getElementById("go-home-button");
 const tracker = document.getElementById("tracker");
 const outroBox = document.getElementById("outro-box");
 const reminder = document.getElementById("reminder");
-//console.log(answerOption);
 
 let next;
 let currentQuestion = {};
@@ -25,7 +20,6 @@ let questionCounter = 1;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
 //const maxQuestions = 10;
 let score = 0;
-//let allowAnswer;
 let progress;
 let answer;
 let acceptingAnswers = true;
@@ -45,7 +39,6 @@ letsPlay.addEventListener("click", () => {
 
 /* resets game */
 function resetGame() {
-    //document.gameDisplay.reload();
     questionCounter = 1;
     score = 0;
     endButton.style.display = "none";
@@ -60,15 +53,8 @@ function resetGame() {
 /*Starts game*/
 let startGame = () => {
     getQuestion();
-    console.log(availableQuestions);
     scoreTracker();
 };
-
-/*randomises question array and cut array length to 10 questions, ensuring no repeats*/
-//let randomiser = () => {
-// availableQuestions.sort(() => 0.5 - Math.random()); //sorts questions array copy into random order
-// availableQuestions.length = 10; //removes last 15 questions from new array
-//};
 
 /*Gets a question set*/
 let getQuestion = () => {
@@ -76,32 +62,27 @@ let getQuestion = () => {
     currentQuestion = availableQuestions[questionIndex]; //ensures random question from availableQuestions list is selected as currentQuestion
 
     questionBox.innerText = currentQuestion.question;
-    console.log(questionBox);
 
     answerOption.forEach((option) => {
         const number = option.dataset.number;
         option.innerText = currentQuestion['option' + number];
     });
 
-    availableQuestions.splice(questionIndex, 1);
-    console.log(availableQuestions); //removes current question from the avaiable list so no repeats in-game
-};
-
-// check to see if at end of question set - if so, send to end page// 
+    availableQuestions.splice(questionIndex, 1); //removes current question from the avaiable list so no repeats in-game
+    console.log(availableQuestions); //shows question array decreasing on each new question as check splice is working correctly
+}; 
 
 /*next button to load next question*/
 next = document.getElementById("next-button");
-// next.addEventListener("click", loadNextQ);
 
 next.addEventListener("click", () => {
     if (acceptingAnswers) {
-        console.log("you forgot!!!");
+        console.log("you forgot!!!"); //console checking that this event listener is working
         reminder.style.display = "block"; //Add class to display reminder feedback to user
         setTimeout(function () {
             reminder.style.display = "none";
-            }, 1000); // removes display after a short delay
+            }, 1000); // removes reminder display after a short delay so user can continue game
     } else {
-       // reminder.style.display = "none";
         loadNextQ();
     }
 });
@@ -110,7 +91,6 @@ function loadNextQ() {
     acceptingAnswers = true;
     questionCounter++;
     progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);
-    console.log(questionCounter);
     getQuestion();
 
     if (questionCounter >= 5) {
@@ -118,7 +98,7 @@ function loadNextQ() {
         nextButton.style.display = "none";
         endButton.style.display = "inline-block";
     }
-};
+}
 
 //score tracker//
 function scoreTracker() {
@@ -128,13 +108,9 @@ function scoreTracker() {
         answerOption[i].addEventListener("click", function listen() {
 
             if (acceptingAnswers) {
-                acceptingAnswers = false
-
-                console.log("you clicked answer " + i);
-                console.log(listen);
+                acceptingAnswers = false;
 
                 answer = currentQuestion.answer;
-                console.log("you chose answer " + answer);
 
                 if (i == (answer - 1)) {
                     score++;
@@ -154,14 +130,8 @@ function scoreTracker() {
                 }
             }
         });
-
-        /*for (let i = 0; i < answerOption.length; i++) {
-            answerOption[i].removeEventListener("click", listen)
-            }; */ //intended to remove event listener so user cannot select further answers in same question - ?scope issues causing failure
     }
 }
-
-//end page - final score feedback, play again & home buttons//
 
 /*send user to rules page when clicking rules button on home page*/
 const rules = document.getElementById("rules-button");
@@ -202,7 +172,6 @@ endButton.addEventListener("click", () => {
 playAgainButton.addEventListener("click", () => {
     gameDisplay.style.display = "block";
     endPage.style.display = "none";
-    console.log("you clicked the play again button");
     resetGame();
 });
 
@@ -210,6 +179,5 @@ playAgainButton.addEventListener("click", () => {
 goHomeButton.addEventListener("click", () => {
     homeDisplay.style.display = "block";
     endPage.style.display = "none";
-    console.log("You clicked the go home  button");
     return window.location.assign('index.html');
 });
