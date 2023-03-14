@@ -54,6 +54,7 @@ function resetGame() {
     progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);
     answer = "";
     availableQuestions = [...questionsArray]; //allows question array to be rebuilt
+    reminder.style.display = "none";
 }
 
 /*Starts game*/
@@ -94,18 +95,18 @@ next = document.getElementById("next-button");
 
 next.addEventListener("click", () => {
     if (acceptingAnswers) {
-        console.log("you forgot!!!")
+        console.log("you forgot!!!");
+        reminder.style.display = "block"; //Add class to display reminder feedback to user
         setTimeout(function () {
-            reminder.style.display = "inline-block"; 
-        }, 500);
+            reminder.style.display = "none";
+            }, 1000); // removes display after a short delay
     } else {
-        //acceptingAnswers = true;
+       // reminder.style.display = "none";
         loadNextQ();
     }
 });
 
-function loadNextQ() {
-    reminder.style.display = "none"; 
+function loadNextQ() { 
     acceptingAnswers = true;
     questionCounter++;
     progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);
@@ -179,9 +180,10 @@ goBack.addEventListener("click", () => {
 /*sends user to end page when clicking end button at end of question 10*/
 endButton.addEventListener("click", () => {
     if (acceptingAnswers) {
+        reminder.style.display = "block"; //Add class to display reminder feedback to user
         setTimeout(function () {
-            reminder.style.display = "inline-block"; 
-        }, 500);
+            reminder.style.display = "none";
+            }, 1000);
     } else {
         acceptingAnswers = true;
         gameDisplay.style.display = "none";
