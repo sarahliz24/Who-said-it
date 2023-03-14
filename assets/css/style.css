@@ -116,11 +116,21 @@ h1 {
     display: none;
     font-family: 'Bangers', cursive;
     font-size: 1.5em;
+    height: 30%;
     letter-spacing: 5px;
     margin-top: 1%;
     padding: 1px;
+    position: fixed;
     text-align: center;
     text-shadow: 4px 4px #e6e8e6;
+    width: 80%;
+    z-index: 2;
+
+    top: 34%;
+    left: 9%;
+    right: 0;
+    bottom: 0;
+
 }
 
 #outro-box {
