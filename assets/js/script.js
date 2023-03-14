@@ -117,14 +117,14 @@ function scoreTracker() {
                     answerOption[i].classList.add('correct-answer'); //Add class to display correct answer feedback to user
                     setTimeout(function () {
                         answerOption[i].classList.remove('correct-answer');
-                    }, 1000); //correct answer display removed after a time
+                    }, 800); //correct answer display removed after a time
                 } else {
                     console.log("WRONG! your score is now " + score);
                     tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
                     answerOption[i].classList.add('wrong-answer');
                     setTimeout(function () {
                         answerOption[i].classList.remove('wrong-answer');
-                    }, 1000); //correct answer display removed after a time 
+                    }, 800); //correct answer display removed after a time 
                 }
             }
         });

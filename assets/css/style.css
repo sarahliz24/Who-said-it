@@ -151,7 +151,6 @@ h1 {
 }
 
 /* BUTTONS*/
-/*  'Let's play!' button style*/
 
 .white-button {
     background-color: #e6e8e6;
@@ -195,7 +194,7 @@ h1 {
     box-shadow: 5px 5px 5px #df2935;
 }
 
-/* SECTION DISPLAYS */
+/* SECTION DISPLAYS - to enable showing/hiding relevant section as progressing through game */
 #home-display {
     display: block;
     margin-top: 10%;
