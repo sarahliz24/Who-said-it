@@ -11,7 +11,6 @@ const endButton = document.getElementById("end-button");
 const playAgainButton = document.getElementById("play-again-button");
 const goHomeButton = document.getElementById("go-home-button");
 const tracker = document.getElementById("tracker");
-const outroBox = document.getElementById("outro-box");
 const reminder = document.getElementById("reminder");
 
 let next;
@@ -155,6 +154,7 @@ endButton.addEventListener("click", () => {
             reminder.style.display = "none";
             }, 1000);
     } else {
+        const outroBox = document.getElementById("outro-box");
         acceptingAnswers = true;
         gameDisplay.style.display = "none";
         endPage.style.display = "block";
