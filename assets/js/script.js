@@ -16,7 +16,6 @@ let next;
 let currentQuestion = {};
 let questionCounter = 1;
 let availableQuestions = [...questionsArray]; //copies questions array to prevent mutation of original data
-//const maxQuestions = 10;
 let score = 0;
 let progress;
 let answer;
@@ -92,8 +91,8 @@ function loadNextQ() {
     progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);
     getQuestion();
 
-    if (questionCounter >= 5) {
-        console.log("more than 5");
+    if (questionCounter >= 10) {
+        console.log("you are on question 10"); //logs question number to check button switch occurs at correct question
         nextButton.style.display = "none";
         endButton.style.display = "inline-block";
     }
