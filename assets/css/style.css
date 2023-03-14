@@ -50,6 +50,11 @@ h1 {
     text-align: left;
 }
 
+/*gives line breaks between list items*/
+#rules-box li {
+    margin: 1em; 
+}
+
 .score-display {
     background-color: rgba(253, 202, 64, 0.9);
     border-radius: 15px;
