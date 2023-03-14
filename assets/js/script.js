@@ -1,6 +1,5 @@
 //Global variables//
 const letsPlay = document.getElementById("lets-play");
-const questionBox = document.getElementById("question-box");
 let answerOption = Array.from(document.getElementsByClassName("answer-option"));
 const endPage = document.getElementById("end-page");
 const homeDisplay = document.getElementById("home-display");
@@ -57,6 +56,7 @@ let startGame = () => {
 
 /*Gets a question set*/
 let getQuestion = () => {
+    const questionBox = document.getElementById("question-box");
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex]; //ensures random question from availableQuestions list is selected as currentQuestion
 
