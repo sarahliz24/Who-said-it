@@ -32,7 +32,7 @@ let acceptingAnswers = true;
 
 /*Lets DOM load before starting play*/
 document.addEventListener("DOMContentLoaded", function () {
-    //startGame();
+    startGame();
 });
 
 /* Displays and hides sections as advancing through gameplay via button clicks*/
