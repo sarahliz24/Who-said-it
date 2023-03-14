@@ -6,7 +6,7 @@ const homeDisplay = document.getElementById("home-display");
 const rulesDisplay = document.getElementById("rules-display");
 const gameDisplay = document.getElementById("game-display");
 const nextButton = document.getElementById("next-button");
-const endButton = document.getElementById("end-button");  //go to results page button
+const endButton = document.getElementById("end-button"); //go to results page button
 const playAgainButton = document.getElementById("play-again-button");
 const goHomeButton = document.getElementById("go-home-button");
 const tracker = document.getElementById("tracker");
@@ -22,9 +22,9 @@ let answer;
 let acceptingAnswers = true;
 
 /*Lets DOM load before starting play*/
-document.addEventListener("DOMContentLoaded", function () {
-    startGame();
-});
+//document.addEventListener("DOMContentLoaded", function () {
+//startGame();
+//});
 
 /* Displays and hides sections as advancing through gameplay via button clicks*/
 letsPlay.addEventListener("click", () => {
@@ -34,7 +34,7 @@ letsPlay.addEventListener("click", () => {
     startGame();
 });
 
-/* resets game */
+/*RESET GAME - */
 function resetGame() {
     questionCounter = 1;
     score = 0;
@@ -47,16 +47,16 @@ function resetGame() {
     reminder.style.display = "none";
 }
 
-/*Starts game*/
+/*START GAME - */
 let startGame = () => {
     getQuestion();
     scoreTracker();
 };
 
-/*Gets a question set*/
+/*GET QUESTION - */
 let getQuestion = () => {
     const questionBox = document.getElementById("question-box");
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length); //randomises question selection
     currentQuestion = availableQuestions[questionIndex]; //ensures random question from availableQuestions list is selected as currentQuestion
 
     questionBox.innerText = currentQuestion.question;
@@ -66,65 +66,71 @@ let getQuestion = () => {
         option.innerText = currentQuestion['option' + number];
     });
 
-    availableQuestions.splice(questionIndex, 1); //removes current question from the avaiable list so no repeats in-game
-    console.log(availableQuestions); //shows question array decreasing on each new question as check splice is working correctly
-}; 
+    availableQuestions.splice(questionIndex, 1); //Removes current question from the avaiable list so no repeats in-game
+    console.log(availableQuestions);
+};
 
 /*next button to load next question*/
 next = document.getElementById("next-button");
 
+/*NEXT BUTTON - Loads next question OR reminds user to select an answer*/
 next.addEventListener("click", () => {
     if (acceptingAnswers) {
         console.log("you forgot!!!"); //console checking that this event listener is working
-        reminder.style.display = "block"; //Add class to display reminder feedback to user
+        reminder.style.display = "block"; //Display feedback to user to select an answer
         setTimeout(function () {
             reminder.style.display = "none";
-            }, 1000); // removes reminder display after a short delay so user can continue game
+        }, 1000); // removes reminder display after a short delay so user can continue game
     } else {
         loadNextQ();
     }
 });
 
-function loadNextQ() { 
+/*LOAD NEXT QUESTION - allows user to select an answer,
+increments question display counter, gives written feedback to 
+user re current score, gets new question*/
+function loadNextQ() {
     acceptingAnswers = true;
-    questionCounter++;
-    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`);
+    questionCounter++; //increments question display counter
+    progress = document.getElementById("progress").innerText = (`Question ${questionCounter}/ 10`); //written feedback to user on current progress
     getQuestion();
 
-    if (questionCounter >= 10) {
-        console.log("you are on question 10"); //logs question number to check button switch occurs at correct question
+    if (questionCounter >= 10) { //at final question shows user the go to results (go to end page) button
+        console.log("you are on question 10");
         nextButton.style.display = "none";
         endButton.style.display = "inline-block";
     }
 }
 
-//score tracker//
+/*SCORE TRACKER - loops through each of the answer options,
+records which answer user selected, gives visual and written
+feedback to user, increments score*/
 function scoreTracker() {
 
-    for (let i = 0; i < answerOption.length; i++) {
+    for (let i = 0; i < answerOption.length; i++) { //loops through each available answer
 
-        answerOption[i].addEventListener("click", function listen() {
+        answerOption[i].addEventListener("click", function listen() { //takes in user answer selection
 
             if (acceptingAnswers) {
-                acceptingAnswers = false;
+                acceptingAnswers = false; //allows user to select answer
 
                 answer = currentQuestion.answer;
 
                 if (i == (answer - 1)) {
-                    score++;
+                    score++; //increments score by 1 if answer correct
                     console.log("CORRECT! your score is now " + score);
-                    tracker.innerText = ("CORRECT! your score is now " + score + " out of 10");
-                    answerOption[i].classList.add('correct-answer'); //Add class to display correct answer feedback to user
+                    tracker.innerText = ("CORRECT! your score is now " + score + " out of 10"); //Updates tracker display to give written correct answer feedback to user
+                    answerOption[i].classList.add('correct-answer'); //Add class to display correct answer (visual) feedback to user, turning answer box green
                     setTimeout(function () {
                         answerOption[i].classList.remove('correct-answer');
                     }, 800); //correct answer display removed after a time
                 } else {
                     console.log("WRONG! your score is now " + score);
-                    tracker.innerText = ("WRONG! your score is now " + score + " out of 10");
-                    answerOption[i].classList.add('wrong-answer');
+                    tracker.innerText = ("WRONG! your score is now " + score + " out of 10"); //Updates tracker display to give written wrong answer feedback to user
+                    answerOption[i].classList.add('wrong-answer'); //Add class to display correct answer (visual) feedback to user, turning answer box red
                     setTimeout(function () {
                         answerOption[i].classList.remove('wrong-answer');
-                    }, 800); //correct answer display removed after a time 
+                    }, 800); //correct answer display removed after a time
                 }
             }
         });
@@ -145,36 +151,36 @@ goBack.addEventListener("click", () => {
     rulesDisplay.style.display = "none";
 });
 
-/*sends user to end page when clicking end button at end of question 10*/
+/*sends user to end (results) page when clicking end button after answering final question*/
 endButton.addEventListener("click", () => {
     if (acceptingAnswers) {
-        reminder.style.display = "block"; //Add class to display reminder feedback to user
+        reminder.style.display = "block"; //Adds class to display reminder feedback to user to choose an answer for final question
         setTimeout(function () {
             reminder.style.display = "none";
-            }, 1000);
+        }, 1000);
     } else {
         const outroBox = document.getElementById("outro-box");
-        acceptingAnswers = true;
+        acceptingAnswers = true; //disallows user from selecting further answer after answering final question
         gameDisplay.style.display = "none";
         endPage.style.display = "block";
-            if (score <= 4) {
-                outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "You tried hard, but you really need to brush up on your celebrity knowledge!!" + "\n" + "\n" + "Thanks for playing";
-            } else if (score < 7) {
-                outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "You were decidedly average, maybe playing again will help??" + "\n" + "\n" + "Thanks for playing";
-            } else {
-                outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "Wow, you really know a lot of useless facts about celebrities - can you prove you're really great by scoring so high again??" + "\n" + "\n" + "Thanks for playing";
-            }
+        if (score <= 4) {
+            outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "You tried hard, but you really need to brush up on your celebrity knowledge!!" + "\n" + "\n" + "Thanks for playing";
+        } else if (score < 7) {
+            outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "You were decidedly average, maybe playing again will help??" + "\n" + "\n" + "Thanks for playing";
+        } else {
+            outroBox.innerText = "Your final score is " + score + " out of 10." + "\n" + "\n" + "Wow, you really know a lot of useless facts about celebrities - can you prove you're really great by scoring so high again??" + "\n" + "\n" + "Thanks for playing";
+        }
     }
 });
 
-/*sends user to start of game again when clicking playAgainButton*/
+/*sends user to start of a new set of questions when clicking playAgainButton*/
 playAgainButton.addEventListener("click", () => {
     gameDisplay.style.display = "block";
     endPage.style.display = "none";
     resetGame();
 });
 
-/*sends user to home page when clicking goHomeButton*/
+/*sends user back to home page when clicking return button*/
 goHomeButton.addEventListener("click", () => {
     homeDisplay.style.display = "block";
     endPage.style.display = "none";
