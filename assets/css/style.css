@@ -52,7 +52,6 @@ h1 {
     box-shadow: 5px 5px 5px #0043DE;
     border: solid 2px;
     display: inline-block;
-    font-size: 1.0em;
     letter-spacing: 1px;
     margin-top: 10%;
     max-width: 700px; /*keeps game area compact on larger screens, consistent with other sections*/
@@ -150,8 +149,6 @@ h1 {
 }
 
 #outro-box {
-    width: fit-content;
-    margin: auto;
     border: solid #e6e8e6 3px;
     border-radius: 15px;
     /* converted #fdca40 to rgba to allow setting of opacity; 
@@ -160,7 +157,10 @@ h1 {
     box-shadow: 5px 5px 5px #e6e8e6;
     font-size: 1.4em;
     letter-spacing: 1px;
+    margin: auto;
     margin-top: 15%;
+    max-width: 700px; /*keeps area compact on larger screens, consistent with other sections*/
+    width: fit-content;
 }
 
 /* BUTTONS*/
