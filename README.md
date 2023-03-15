@@ -284,52 +284,59 @@ The header "Who said it" is displayed at the top of the screen, making it easily
 
 ## Validator Testing
 
-The code was regularly tested using w3c validators for HTML and CSS throughout development, using these links:
-[W3C HTML Validator](https://validator.w3.org/#validate_by_input); [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+The code was regularly tested using W3c validators for HTML and CSS throughout development, and passed both tests on final testing.
+<a href="https://validator.w3.org/#validate_by_input" target="_blank">W3C HTML Validator</a>
+<a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validatorit?</a>
 
 ### HTML final testing results:
 
 <details><summary>HTML validation</summary>
-    <img src="">
+    <img src="assets/documentation/html-validation.png">
 </details>
 
 ### CSS final testing results:
 
-<details><summary>CSS Validation</summary>
-    <img src="">
+<details><summary>HTML validation</summary>
+    <img src="assets/documentation/css-validation.png">
 </details>
  
 ## Lighthouse testing
 
-Lighthouse testing was conducted at regular intervals during development, using the Lighthouse function inbuilt into the Chrome Inspector tool.
+* Lighthouse testing was conducted at regular intervals during development, using the Lighthouse function inbuilt into the Chrome Inspector tool
+* 100% gained for Accessibility, Best Practises & SEO
+* 89% gained for Performance - this could have been improved by using an avif file type for the background image, however it was decided to use jpg as this is compatible with the Edge broswer (and avif is not, which would have resulted in the default background for Edge users, decreasing chance of a positive visual game experience for the Edge user)
 
 ### Lighthouse final testing results:
 
 <details><summary>Home Page</summary>
-    <img src="">
+    <img src="assets/documentation/lighthouse-final.png">
 </details>
 
 <details><summary>About Page</summary>
     <img src="">
 </details>
 
-<details><summary>Resources Page</summary>
-    <img src="">
-</details>
+## Responsiveness Testing
 
-
+* All responsive testing performed as expected
+* Responsiveness was specifically tested during development, and at final testing, using Chrome and Firefox development responsive tools with a wide variety of screen sizes
+* The Responsive Design Checker website was also used to test for responsiveness <a href="https://responsivedesignchecker.com/" target="_blank">Responsive Design Checker</a>
+* Testing was also successfully performed on the following devices:
+    * Huawei P20 Pro
+    * Samsung Galaxy S22 Ultra
+    * Microsoft Surface Pro 7
+    * Acer desktop with HP 24 inch HD monitor
+    * HP Notepad
 
 ## Accessibility testing
 
-Accessibility testing was performed regularly throughout development utilising 'WAVE Web Accessibility Evaluation Tools', using this link: [WAVE Testing](https://wave.webaim.org/)
-
-This testing provided assistance on ensuring relevant issues were identified and resolved during development:
-* 
-
- 
- <details><summary>Home Page</summary>
-    <img src="">
+<details><summary>Wave Testing</summary>
+    <img src="assets/documentation/wave-testing.png">
 </details>
+
+Accessibility testing was performed regularly throughout development utilising 'WAVE Web Accessibility Evaluation Tools' <a href="https://wave.webaim.org/" target="_blank">WAVE Testing</a>
+
+* Early development WAVE testing highlighted a contast issue between the text and the background (i.e. contrast difference too low).  To solve this without significantly changing the visual look of the game the background of the text boxes was changed have a background colour that matched the background image, and was set to an opacity of 0.9.  This allowed the background image to still be visible but provided enough background contrast with the text to achieve a high contrast rating on further WAVE testing.
 
 ### Browser Compatibility Testing
 
@@ -353,15 +360,64 @@ Manual testing was performed successfully (i.e. no issues identified) using the 
 
 The following features were manually tested on all mentioned browsers and devices, and found to be functioning as expected in each test case:
 
-* Navigation section
-    * Clicking each navigation link takes user to the expected page
-    * The active page is highlighted by the correct navigation item text turning bold, with the underline removed
+* Intro section
+    * Page loads as expected
+    * Header is displayed at top of page
+    * All boxes and buttons are visible and active
+    * Yellow opaque boxes are more intensely coloured on Firefox, however this does not detract from the visual design
+    * Mouse hover effect for let's play and rules button working
+    * Rules button operates correctly, taking user to rules section
+    * Let's play button operates as expecting, taking user to first question of the game
+    * When page is expanded wider than 700px the intro box stays the same size, keeping the intro area suitably compact in a larger view space
+    * Background image displays as expected
+    * Fonts load as expected
 
- 
+* Rules section
+    * Page loads as expected
+    * Header is displayed at top of page
+    * Rules box and button are visible and working correctly
+    * Mouse hover effect for buttons working
+    * When page is expanded wider than 700px the intro box stays the same size, keeping the intro area suitably compact in a larger view space
+    
+* Game section
+    * Page loads as expected
+    * Header is displayed at top of page
+    * All boxes and buttons are visible and active
+    * Yellow opaque boxes are more intensely coloured on Firefox, however this does not detract from the visual design
+    * Mouse hover effect for next question button working
+    * Next question button operates correctly, taking user to new question
+    * When page is expanded wider than 700px the intro box stays the same size, keeping the intro area suitably compact in a larger view space
+    * Background image displays as expected
+    * Fonts load as expected
+    * Answer boxes respond well to re-sizing, either in column (for very small devices), 2x2 format, or row format, as expected
+    * Correct answer displays green box for a set time, score increments correctly, CORRECT text displays to user
+    * Wrong anwer displays red box for a set time, score does not increment, WRONG text displays to user
+    * When user selected button without choosing an answer, reminder display is shown for set time, as expected
+    * When user selects next question button next question is loaded
+    * Game play progresses smoothly and as expected throughout the set of questions
 
-Responsiveness was specifically tested during development, and at final testing, using Chrome and Firefox development responsive tools with a wide variety of screen sizes, and also on the previously mentioned devices. 
+* End section
+    * Page loads as expected
+    * Header is displayed at top of page
+    * All boxes and buttons are visible and active
+    * Yellow opaque boxes are more intensely coloured on Firefox, however this does not detract from the visual design
+    * Mouse hover effect for buttons is working
+    * When page is expanded wider than 700px the intro box stays the same size, keeping the intro area suitably compact in a larger view space
+    * Background image displays as expected
+    * Fonts load as expected
+    * Correct final score and associated text display to user
+    * Wrong anwer displays red box for a set time, score does not increment, WRONG text displays to user
+    * Play again button operates correctly, taking user to a new set of questions (i.e. a new question 1)
+    * Go home  button operates correctly, taking user to home page
+
+* Re-play
+    * Play again button operates correctly, taking user to a new set of questions (i.e. a new question 1)
+    * Questions and score reset
+    * Welcome message is displayed to user on tracker
+    * Game play progresses smoothly and as expected throughout the set of questions
 
 ## Accessibility
+
 * Early development WAVE testing highlighted a contast issue between the text and the background (i.e. contrast difference too low).  To solve this without significantly changing the visual look of the game the background of the text boxes was changed have a background colour that matched the background image, and was set to an opacity of 0.9.  This allowed the background image to still be visible but provided enough background contrast with the text to achieve a high contrast rating on further WAVE testing.
 * All areas of the game are able to be used using the same input method
 * Game controls are as simple as possible
