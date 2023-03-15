@@ -263,8 +263,9 @@ Responsiveness was specifically tested during development, and at final testing,
 * THere are no known bugs at present
 
 ## Solved bugs
-* 1. During early testing it was identified that the game was recording the selected user answer twice with a single user selection (e.g. mouse click), which was then incrementing the score x2
+1. During early testing it was identified that the game was recording the selected user answer twice with a single user selection (e.g. mouse click), which was then incrementing the score x2
  To fix: checked console log, noted same rountine was running more than once (scoreTracker); identified that startGame function was called at incorrect point in game, removed this and score then incrementing correctly
+ 2. During early testing it was found that questions were repeating within a single game.  I had written a randomiser function to deal with this, however it was not working as intended, and I changed it to a single code line splicing the question array after each question, which was effective in solving the issue.
 ---
 
 # Deployment
