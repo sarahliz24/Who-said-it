@@ -9,8 +9,6 @@ body {
     font-size: 100%;
     font-weight: 700;
     text-align: center;
-
-    max-width: 700px;
 }
 
 h1 {
@@ -24,7 +22,9 @@ h1 {
 /*DISPLAY AREAS*/
 
  .game {
-    max-width: 700px;
+    max-width: 700px; /*keeps game area compact on larger screens*/
+    margin-left: auto; /*left & right auto keep game area centred on screen*/
+    margin-right: auto;
  }
 
 /*TEXT BOXES*/
@@ -54,7 +54,7 @@ h1 {
     display: inline-block;
     font-size: 1.0em;
     letter-spacing: 1px;
-    margin-top: 15%;
+    margin-top: 10%;
     padding: 5px;
     text-align: left;
 }
