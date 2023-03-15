@@ -274,10 +274,11 @@ The header "Who said it" is displayed at the top of the screen, making it easily
 * On mouse hover the button text changes from red to blue, and the border changes from blue to red, letting the desktop user know they are about to select the button
 * When selected, the button takes the user back to the home page, refreshing the page, and resetting all game parameters
 
-## Future Features
+# Future Features
 
-### Leaderboard
-
+## Leaderboard
+* Implementation of a leaderboard where user can enter their name, and leaderboard displays top five user scores
+* Addition of futher question sets to the questions array to increase value of user re-play
 
 # TESTING
 
