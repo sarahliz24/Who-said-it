@@ -239,11 +239,38 @@ h1 {
 
 /*  MEDIA QUERIES*/
 
-/* FOR SCREEN SIZES from 577 - 900px wide */
+/* FOR SCREEN SIZES from 577px and upwards */
 @media screen and (min-width: 577px) {
 
     /* controls flex box size so that answerOption boxes stay in 2x2 layout */
     .options-container {
         flex-flow: row;
+    }
+}
+
+/* FOR SCREEN SIZES from 481px and upwards */
+@media screen and (min-width: 577px) {
+
+    /* adds space above h1 for improved layout*/
+    h1 {
+        margin: revert; 
+    }
+
+    .white-button {
+        margin-top: 3%;
+    }
+
+    .red-button {
+        margin-top: 3%;
+    }
+
+    /* reduces space above box for improved layout & consistency with previous display*/
+    #rules-box {
+        margin-top: 5%;  
+    }
+
+    /* reduces space above box for improved layout*/
+    #outro-box {
+        margin-top: 10%;  
     }
 }
