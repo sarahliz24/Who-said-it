@@ -160,6 +160,7 @@ h1 {
     margin: auto;
     margin-top: 15%;
     max-width: 700px; /*keeps area compact on larger screens, consistent with other sections*/
+    padding: 1% 5%;
     width: fit-content;
 }
 
