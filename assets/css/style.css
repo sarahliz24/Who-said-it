@@ -154,6 +154,7 @@ h1 {
 
 /* BUTTONS */
 
+/*  controls style for let's play & play again buttons */
 .white-button {
     background-color: #e6e8e6;
     box-shadow: 5px 5px 5px #0043DE;
@@ -174,6 +175,7 @@ h1 {
     box-shadow: 5px 5px 5px #df2935;
 }
 
+/*  controls style for rules, next question, results and go home buttons */
 .red-button {
     background-color: rgba(253, 202, 64, 0.9);
     border-radius: 15px;
