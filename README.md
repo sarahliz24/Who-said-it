@@ -1,10 +1,8 @@
-# SMARA Cancer Support Group
----
+# Who said it? Quiz
 <!-- code to make layout demo from https://ui.dev/amiresponsive -->
-<img src="documentation/responsive-layout-demo.png">
+<img src="assets/documentation/amiresponsive.png">
 
-Site link: [Who said it?](https://sarahliz24.github.io/Who-said-it/)
-
+Site link: <a href="https://sarahliz24.github.io/Who-said-it/" target="_blank">Who said it?</a>
 ---
 # TABLE OF CONTENTS
 
@@ -40,24 +38,26 @@ Site link: [Who said it?](https://sarahliz24.github.io/Who-said-it/)
 
 # INTRODUCTION
 
-SMARA Cancer Support Group is a concept site that provides an basic overview of the SMARA cancer support group's services.  Currently the site operates from a Facebook page (with a limited Instragram profile in addition), and this site is intended to provide a website separate to social media, to help increase the groups visibility and legitimacy for potential users.  The site is aimed at people searching for cancer support services in South Trinidad, and will allow them to see what supports and activites the group offers to them, providing links to the groups active social media pages, and providing a method for people to get in touch with the group to engage with its services. As the groups resources grow it is envisaged that the site can be expanded to include more detailed information on the groups activities, such as fundraising activities, upcoming events, and provide an online method to contribute donations to help fund the group's activities.
+This website presents an interactive quiz game, focused on celebrity quotes. It is designed to be a fun distraction from the grind of daily life for the user,  including a bright and fun grahphical style, humerous questions, cheeky feedback comments to entertain, and the ability to replay.
 
 # USER EXPERIENCE
 
-## Goals
+## User Stories
 
-### Site Owner Goals
+### New User
 
- As the site owner I expect:
- * A site that introduces the existence of the Cancer Support Group to its audience
- * A site that is easy to use and navigate around
+As a new user I want to:
+ * understand the purpose of the site quickly
+ * be able to navigate around the site intuitively
  * A site that presents clear and simple information about what services the group offers
  * A site that inspires trust in the user
  * A site that lets the user know who can access the groups services
  * A site that lets the user know how to access the groups services
  * A site that could be expanded in the future
 
-## User Goals
+### Returning User
+
+As a returning user, I want to [perform some task] so that I can [achieve some goal]
 
 As a new user I expect:
  * A site that explains how the group can help me in clear and simple terms
