@@ -28,6 +28,19 @@ h1 {
 
 /* TEXT BOXES */
 
+/* Styles intro box & contribrutes to outro box */
+.yellow-box {
+    /* converted #fdca40 to rgba to allow setting of opacity; 
+    https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
+    background-color: rgba(253, 202, 64, 0.9);
+    border: solid #e6e8e6 3px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #e6e8e6;
+    margin: auto;
+    max-width: 700px;
+    width: fit-content;
+}
+
 #rules-title {
     text-align: center;
 }
@@ -141,17 +154,6 @@ h1 {
     padding: 1% 5%;
 }
 
-.yellow-box {
-    /* converted #fdca40 to rgba to allow setting of opacity; 
-    https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
-    background-color: rgba(253, 202, 64, 0.9);
-    border: solid #e6e8e6 3px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px #e6e8e6;
-    margin: auto;
-    width: fit-content;
-}
-
 /* BUTTONS */
 
 .white-button {
@@ -248,6 +250,12 @@ h1 {
     /* reduces space above box for improved layout & consistency with previous display*/
     #rules-box {
         margin-top: 5%;  
+    }
+
+    #end-page {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
     }
 
     /* reduces space above box for improved layout*/
