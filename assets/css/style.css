@@ -9,6 +9,8 @@ body {
     font-size: 100%;
     font-weight: 700;
     text-align: center;
+
+    max-width: 700px;
 }
 
 h1 {
@@ -18,6 +20,12 @@ h1 {
     text-shadow: 5px 5px 5px #e6e8e6;
     margin: auto;
 }
+
+/*DISPLAY AREAS*/
+
+ .game {
+    max-width: 700px;
+ }
 
 /*TEXT BOXES*/
 
@@ -164,7 +172,7 @@ h1 {
     font-family: 'Bangers', cursive;
     font-size: 2.5em;
     letter-spacing: 1px;
-    margin-top: 15%;
+    margin-top: 10%;
     padding: 20px;
     text-align: center;
 }
@@ -186,7 +194,7 @@ h1 {
     font-family: 'Bangers', cursive;
     font-size: 2.5em;
     letter-spacing: 1px;
-    margin-top: 15%;
+    margin-top: 10%;
     padding: 20px;
     text-align: center;
 }
