@@ -37,7 +37,7 @@ Site link: <a href="https://sarahliz24.github.io/Who-said-it/" target="_blank">W
 
 # INTRODUCTION
 
-This website presents an interactive quiz game, focused on celebrity quotes. It is designed to be a fun distraction from the grind of daily life for the user, including a bright and fun pop-art grahphical style, humorous questions, cheeky feedback comments to entertain at the end, and the ability to replay.
+This website presents an interactive quiz game, focused on celebrity quotes. It is designed to be a fun distraction from the grind of daily life for the user, including a bright and fun pop-art grahphical style, humorous questions, cheeky feedback comments to entertain at the end, and the ability for the to replay the game.
 
 # USER EXPERIENCE
 
@@ -76,7 +76,7 @@ As a returning user I want to:
     <img src="assets/documentation/colours1.png">
 </details>
 
-The colour scheme was chosen to tie in the with game ethos of being bright and fun, with a pop-art style.  A bright, contrasting colour palatte was selected, and then the yellow colour was manually edited to match the yellow from the background image, for a cohesive look.  
+The colour scheme was chosen to tie in the with game ethos of being bright and fun, with a pop-art style.  A bright, contrasting colour palatte was selected, and then the yellow colour was manually edited to match the yellow from the background image, for a cohesive look.
 
 The colours chosen were:
 * Palatinate Blue #0043DE 
@@ -135,7 +135,7 @@ Wireframes for the project are below.  Mobile and desktop wireframes were produc
     <img src="assets/documentation/header.png">
 </details>
 
-The header "Who said it" is displayed at the top of the screen, making it easily visible.  The header is visible during all sections of game play, providing consistency to the site.  
+The header "Who said it" is displayed at the top of the screen, making it easily visible.  The header is visible during all sections of game play, providing consistency to the site
 
 ## 2. Home Display
 
@@ -145,20 +145,45 @@ The header "Who said it" is displayed at the top of the screen, making it easily
     <img src="assets/documentation/intro-box.png">
 </details>
 
+* The intro box is styled in a consistent manner to all other user information text boxes, with a yellow background, white border, and blue text - this helps make it clear to users these boxes are for information and are not integral to game play
+* The box explains, in the cheeky tone of the game, that it is a time-wasting quiz about celebrity sayings, making the game's purpose clear to the user
+
 <details><summary>Let's Play Button</summary>
     <img src="assets/documentation/letsplay-button.png">
 </details>
 
+* Beneath the intro box, is the let's play button
+* This button is styled with red text, to draw the user eye
+* It has a white background, and blue border, which is consistent with the play again button on the final page, providing a consistent 'play the game' cue to the user
+* The white background is also consistent with the white background used in the question and answer boxes, also providing consistency to the user with regards to game play sections
+* On mouse hover the button text changes from red to blue, and the border changes from blue to red, letting the desktop user know they are about to select the button
+* When selected, the button takes the user into the game, loading the first question and welcome text
 
 ### Rules Display
+
+<details><summary>Rules button</summary>
+    <img src="assets/documentation/rules-button.png">
+</details>
+
+* Beneath the let's play button is the rules button - this is styled with a yellow background and blue/white border
+* The button style is consistent with the go back button in the rules section, providing a visual link to the two buttons and their association with the rules
+* On mouse hover the button text changes from red to blue, and the border changes from blue to red, letting the desktop user know they are about to select the button
+* The button is beneath the let's play button so it can be ignored by either a user who is confident to play without advice, or by the returning user
 
 <details><summary>Rules display</summary>
     <img src="assets/documentation/rules.png">
 </details>
 
-<details><summary>Rules button</summary>
-    <img src="assets/documentation/rules-button.png">
+* Clicking the rules button displays the rules section to the user
+* This provides a short description of game play and lets the user know how many questions will be asked
+* It also contains a cheeky quip consistent with the game ethos
+
+<details><summary>go back button</summary>
+    <img src="assets/documentation/goback-button.png">
 </details>
+
+* The go back button takes the user back to the intro page when clicked
+* It's styling and hover effect is the same as the rules button for consistency
 
 ## 3. Game Display
 
@@ -166,21 +191,56 @@ The header "Who said it" is displayed at the top of the screen, making it easily
     <img src="assets/documentation/welcome-message.png">
 </details>
 
+* The welcome display box is yellow with blue text, consistent with all information text boxes across the game
+* For the first question it displays text welcoming the player, and invites them to click a button to start playing - this acts as a prompt for a user who unsure how to proceed with play
+
 <details><summary>Question Box</summary>
     <img src="assets/documentation/q-and-a.png">
 </details>
+
+* Game questions are displayed in red text to draw the users eye.
+* The question box has a white background to emphasise it is an important area of game play (consistent across the game with other game play areas/buttons)
 
 <details><summary>Answer Boxes</summary>
     <img src="assets/documentation/q-and-a.png">
 </details>
 
+* The answer boxes are displayed with blue text, to differentiate them clearly from the question area
+* The user can click on one box only to answer, and after an answer is selected all other answers options cannot be selected (remaining locked until the next question is loaded)
+* If a user is correct the box will turn green for a short period
+* Textual feedback is given to the user in the tracker box, where 'CORRECT' is displayed
+* Score feedback is also given to the user as the score increments in the tracker (information) box at the top of the page e.g. "Your score is now 1 out of 10"
+* If a user is wrong the box will turn red for a short period
+* Textual feedback is given to the user in the tracker box, where 'WRONG' is diplayed
+* Score feedback is also given to the user as the score does not increment in the tracker (information) box at the top of the page e.g. "Your score is now 0 out of 10"
+
 <details><summary>Next Button</summary>
     <img src="assets/documentation/next-button.png">
 </details>
 
+* Beneath the answer options is the next question button - this is styled with a yellow background and blue/white border. The button style is consistent with the go back and rules buttons 
+* When selected a new question and answer set loads for the user
+* On mouse hover the button text changes from red to blue, and the border changes from blue to red, letting the desktop user know they are about to select the button
+* The button is beneath the answer options to provide a logical flow of game play execution to the user
+
 <details><summary>Reminder Alert</summary>
     <img src="assets/documentation/reminder.png">
 </details>
+
+* If the user does not select an answer, and clicks the next button (an unexpected event) a reminder alert is displayed, overlaying the question/answer area
+* The reminder stays active long enough for the user to notice it, but not long enough to impede game play or annoy the user
+* The reminder will re-activate each time the user clicks the next button without selecting an anwser
+
+<details><summary>Go To Results Button</summary>
+    <img src="assets/documentation/gotoresults-button.png">
+</details>
+
+* One the last question, the next button changes to a go to results button
+* This is a visual cue to the user that they are on the last question
+* This is styled with a yellow background and blue/white border - the button style is consistent with the next button, go back and rules buttons 
+* When selected the game questions/answers disappear and the outro display is shown
+* On mouse hover the button text changes from red to blue, and the border changes from blue to red, letting the desktop user know they are about to select the button
+* The button is beneath the answer options to provide a logical flow of game play execution to the user
 
 ## 4. End Page
 
@@ -188,13 +248,31 @@ The header "Who said it" is displayed at the top of the screen, making it easily
     <img src="assets/documentation/outro-box.png">
 </details>
 
+* The outro box is styled in a consistent manner to all other user information text boxes, with a yellow background, white border, and blue text - this helps make it clear to users these boxes are for information and are not integral to game play
+* The user final score is displayed, along with cheecky quip in the tone of the game
+* If the user scores 4 or less, the message reads: "You tried hard, but you really need to brush up on your celebrity knowledge!!" and "Thanks for playing"
+* If the user scores 5 or 6, the message reads: "You were decidedly average, maybe playing again will help??" and "Thanks for playing"
+* If the user scores 7 or more, the message reads: "Wow, you really know a lot of useless facts about celebrities - can you prove you're really great by scoring so high again??" and "Thanks for playing"
+
 <details><summary>Play Again Button</summary>
     <img src="assets/documentation/playagain-button.png">
 </details>
 
+* Beneath the outro box, is play again button
+* This button is styled with red text, to draw the user eye
+* It has a white background, and blue border, which is consistent with the let's play button on the first page, providing a consistent 'play the game' cue to the user
+* The white background is also consistent with the white background used in the question and answer boxes, also providing consistency to the user with regards to game play sections
+* On mouse hover the button text changes from red to blue, and the border changes from blue to red, letting the desktop user know they are about to select the button
+* When selected, the button takes the user directly into the first question of a new game, resetting all game parameters
+
 <details><summary>Go Home Button</summary>
     <img src="assets/documentation/gohome-button.png">
 </details>
+
+* Beneath the play again button is the go home button
+* This is styled with a yellow background and blue/white border - the button style is consistent with the next button, go back and rules buttons 
+* On mouse hover the button text changes from red to blue, and the border changes from blue to red, letting the desktop user know they are about to select the button
+* When selected, the button takes the user back to the home page, refreshing the page, and resetting all game parameters
 
 ## Future Features
 
