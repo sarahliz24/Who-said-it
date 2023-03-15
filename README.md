@@ -128,11 +128,11 @@ Wireframes for the project are below.  Mobile and desktop wireframes were produc
 </details>
 ---
 
-# FEATURES
+# CURRENT FEATURES
 
-## 1. Header and Navigation Bar
+## 1. Header
 
-<details><summary>Header and Navigation</summary>
+<details><summary>Header</summary>
     <img src="documentation/header-and-nav.png">
 </details>
 
@@ -299,24 +299,23 @@ The site github link is here: <a href="https://sarahliz24.github.io/Who-said-it/
 
 During the creation of this site I used the following technologies:
 
-* Github
-* Google fonts
-* Balsamiq
-* Am I Responsive - Code for the reponsive design layout picture is from https://ui.dev/amiresponsive
+* Github - used for online programming, change tracking and storage respository for this project
+* Google fonts - used to search and download fonts applied to project
+* Balsamiq - used for creating the wireframes in the project development phase
+* RGBA color picker - used to convert coloors hex colours into rgba in order to set opacity on background of boxes <a href="https://rgbacolorpicker.com/hex-to-rgba " target="_blank">RGBA color picker</a>
+* Coolors website  -used to select and modifycolour palatte <a href="https://coolors.co/" target="_blank">Coolors</a>
 
 ## Media
 
 * Images
-	* Background image...
-	* 
+	* Background image is from Freepik.com <a href="https://www.freepik.com/free-vector/hand-drawn-question-mark-pattern_26539472.htm#query=question%20pattern&position=4&from_view=keyword&track=ais">Freepik</a>
+    * The reponsive design layout picture was created using Am I Responsive <a href="https://ui.dev/amiresponsive" target="_blank">Am I Responsive</a>
 
 * Typography
     * Google fonts - Open Sans and Montserrat
-
-
 ---
 
 # Acknowledgements
 
 Thanks to my mentor Maranatha Ilesanmi who provided me with the support and advice to get the required work done.
-Also thanks to Code Institute tutor support who helped me to understand the final piece of the puzzle when I was trying to understand how to apply the acceptingAnswers concept.
+Also thanks to Code Institute tutor support who helped me to untangle my thinking when I was trying to understand how to apply the acceptingAnswers concept.
