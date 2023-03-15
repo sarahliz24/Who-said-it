@@ -73,7 +73,7 @@ next.addEventListener("click", () => {
     if (acceptingAnswers) {
         reminder.style.display = "block"; //Display feedback to user to select an answer
         /*How to add a timer delay is from bobbyhadz.com
-        * https://bobbyhadz.com/blog/javascript-hide-element-after-few-seconds */
+         * https://bobbyhadz.com/blog/javascript-hide-element-after-few-seconds */
         setTimeout(function () {
             reminder.style.display = "none";
         }, 1000); // removes reminder display after a short delay so user can continue game
@@ -103,7 +103,7 @@ feedback to user, increment score*/
 function scoreTracker() {
 
     /*How to add an event listener to a loop is from the 'ES6 to the rescue' section of this stackoverflow page
-    * https://stackoverflow.com/questions/17981437/how-to-add-event-listeners-to-an-array-of-objects */
+     * https://stackoverflow.com/questions/17981437/how-to-add-event-listeners-to-an-array-of-objects */
     for (let i = 0; i < answerOption.length; i++) { //loop through each available answer
 
         answerOption[i].addEventListener("click", function listen() { //take in user answer selection

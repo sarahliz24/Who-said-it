@@ -37,7 +37,7 @@ Site link: <a href="https://sarahliz24.github.io/Who-said-it/" target="_blank">W
 
 # INTRODUCTION
 
-This website presents an interactive quiz game, focused on celebrity quotes. It is designed to be a fun distraction from the grind of daily life for the user, including a bright and fun pop-art grahphical style, humorous questions, cheeky feedback comments to entertain at the end, and the ability for the to replay the game.
+This website presents an interactive quiz game, focused on celebrity quotes. It is designed to be a fun distraction from the grind of daily life for the user.  It has a bright and fun pop-art graphical style, includes humorous questions and cheeky feedback comments to entertain at the end (re-inforcing the tone of the site), and the user has the ability to replay the game as many times as they wish.
 
 # USER EXPERIENCE
 
@@ -53,7 +53,7 @@ As a new user I want to:
  * Easily access the rules of the game if I need to understand how to play
  * Have feedback on where I am in the quiz so I know how far through I am
  * Have feedback on my score as I progress so I know if I'm succeeding (or not)
- * Have feedback if I've forgotten to answer a question so I don't an opportunity to increase my score
+ * Have feedback if I've forgotten to answer a question so I don't miss an opportunity to increase my score
  * Have feedback at the end of the quiz so I know how well I did
  * Easily replay the quiz so I can enjoy different funny questions
  * Easily replay the quiz so I can try to get a better score
@@ -135,7 +135,7 @@ Wireframes for the project are below.  Mobile and desktop wireframes were produc
     <img src="assets/documentation/header.png">
 </details>
 
-The header "Who said it" is displayed at the top of the screen, making it easily visible.  The header is visible during all sections of game play, providing consistency to the site
+The header "Who said it" is displayed at the top of the screen, making it easily visible.  The header is visible during all sections of game play, providing consistency to the site and reminding the player what the purpose of the question they're answering at each turn is (i.e. selecting which celebrity said the quote given)
 
 ## 2. Home Display
 
@@ -192,7 +192,7 @@ The header "Who said it" is displayed at the top of the screen, making it easily
 </details>
 
 * The welcome display box is yellow with blue text, consistent with all information text boxes across the game
-* For the first question it displays text welcoming the player, and invites them to click a button to start playing - this acts as a prompt for a user who unsure how to proceed with play
+* For the first question it displays text welcoming the player, and invites them to click a button to start playing - this acts as a prompt for a user who is unsure how to proceed with play
 
 <details><summary>Question Box</summary>
     <img src="assets/documentation/q-and-a.png">
@@ -276,45 +276,52 @@ The header "Who said it" is displayed at the top of the screen, making it easily
 
 # Future Features
 
-## Leaderboard
 * Implementation of a leaderboard where user can enter their name, and leaderboard displays top five user scores
 * Addition of futher question sets to the questions array to increase value of user re-play
 
 # TESTING
 
-## Validator Testing
-
-The code was regularly tested using W3c validators for HTML and CSS throughout development, and passed both tests on final testing.
-<a href="https://validator.w3.org/#validate_by_input" target="_blank">W3C HTML Validator</a>
-<a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validatorit?</a>
-
-### HTML final testing results:
+## HTML & CSS Validator Testing
 
 <details><summary>HTML validation</summary>
     <img src="assets/documentation/html-validation.png">
 </details>
 
-### CSS final testing results:
-
-<details><summary>HTML validation</summary>
+<details><summary>CSS validation</summary>
     <img src="assets/documentation/css-validation.png">
 </details>
+
+The code was regularly tested using W3C validators for HTML and CSS throughout development, and passed both tests on final testing.
+<a href="https://validator.w3.org/#validate_by_input" target="_blank">W3C HTML Validator</a>
+<a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validator</a>
+
+### JSHINT final testing results:
+
+<details><summary>JSHINT validation script.js</summary>
+    <img src="assets/documentation/jshint.png">
+</details>
  
+ <details><summary>JSHINT validation data.js</summary>
+    <img src="assets/documentation/jshint2.png">
+</details>
+
+* There were no errors on final jshint testing for either script.js or data.js files. <a href="https://jshint.com/" target="_blank">JSHINT Validator</a>
+* Warnings script.js
+    * Undefined variable (questions array) - this is because jshint is noting the use of a spread operator on the questions array, and can be ignored
+    * Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (acceptingAnswers, answer, currentQuestion, i, score, answerOption)
+        * These functions are used in several places throughout the code.  Although code could be refactored to remove the warning, the issue raised does not presently affect the functionality of the game
+* Warnings data.js
+    * Undefined variable (questions array) - this variable is used in the script.js file, and data.js was created to keep the large array out of the game code script, and can be ignored
+
 ## Lighthouse testing
+
+<details><summary>Lighthouse Testing</summary>
+    <img src="assets/documentation/lighthouse-final.png">
+</details>
 
 * Lighthouse testing was conducted at regular intervals during development, using the Lighthouse function inbuilt into the Chrome Inspector tool
 * 100% gained for Accessibility, Best Practises & SEO
 * 89% gained for Performance - this could have been improved by using an avif file type for the background image, however it was decided to use jpg as this is compatible with the Edge broswer (and avif is not, which would have resulted in the default background for Edge users, decreasing chance of a positive visual game experience for the Edge user)
-
-### Lighthouse final testing results:
-
-<details><summary>Home Page</summary>
-    <img src="assets/documentation/lighthouse-final.png">
-</details>
-
-<details><summary>About Page</summary>
-    <img src="">
-</details>
 
 ## Responsiveness Testing
 
@@ -346,8 +353,8 @@ The site was successfully tested (i.e. no errors identified) on the following br
 * Google Chrome Version 109.0.5414.120 (Official Build) (64-bit)
 * Microsoft Edge Version 109.0.1518.70 (Official build) (64-bit)
 
-* Chrome and Edge both return one console warning - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'. This is related to git hub adding a header-set to all pages and can be ignored  <a href="https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/" target="_blank">Git Hub Blog</a>
-* Firefox returns one console warning - "downloadable font: gasp: Changed the version number to 1 (font-family: "Antic" style:normal weight:400 stretch:100 src index:0)".  This does not affect site functionality.
+    * Chrome and Edge both return one console warning - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'. This is related to git hub adding a header-set to all pages and can be ignored  <a href="https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/" target="_blank">Git Hub Blog</a>
+    * Firefox returns one console warning - "downloadable font: gasp: Changed the version number to 1 (font-family: "Antic" style:normal weight:400 stretch:100 src index:0)".  This does not affect site functionality.
 
 ## Device Testing
 
@@ -459,13 +466,13 @@ This site can be forked using Github as follows (to make a copy in your own repo
 2. Go to **Fork** button on the right-side ribbon menu (between **Unwatch** and **Star**)
 3. Click the button to make a copy automatically into your own respository
 4. **Owner** will default to your own github name
-5. Add a repository name and an optional  
+5. Add a repository name and an optional description 
 6. Select **Create Fork** button
 
 This site can be cloned using Github as follows (to make a copy on your own machine):
 
 1. Enter the relevant Github repository
-2. Click the green **Code** from the menu (to the left of the green **Gitpod** button)
+2. Click the green **Code** button from the menu (to the left of the green **Gitpod** button)
 3. Copy the link under https (to copy using HTTPS)
 4. Open git bash on your own machine, and select the directory you want to save into
 5. Type 'git clone' then copy in your link
@@ -491,9 +498,9 @@ The site github link is here: <a href="https://sarahliz24.github.io/Who-said-it/
 
 During the creation of this site I used the following technologies:
 
-* Github - used for online programming, change tracking and storage respository for this project
-* Google fonts - used to search and download fonts applied to project
-* Balsamiq - used for creating the wireframes in the project development phase
+* Github - used for online programming, change tracking and storage respository for this project <a href="https://github.com/" target="_blank">Git Hub</a>
+* Google fonts - used to search and download fonts applied to project <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+* Balsamiq - used for creating the wireframes in the project development phase <a href="https://balsamiq.com/" target="_blank">Balsamiq</a>
 * RGBA color picker - used to convert coloors hex colours into rgba in order to set opacity on background of boxes <a href="https://rgbacolorpicker.com/hex-to-rgba" target="_blank">RGBA color picker</a>
 * Coolors website  -used to select and modifycolour palatte <a href="https://coolors.co" target="_blank">Coolors</a>
 
@@ -502,9 +509,6 @@ During the creation of this site I used the following technologies:
 * Images
 	* Background image is from Freepik.com <a href="https://www.freepik.com/free-vector/hand-drawn-question-mark-pattern_26539472.htm#query=question%20pattern&position=4&from_view=keyword&track=ais">Freepik</a>
     * The reponsive design layout picture was created using Am I Responsive <a href="https://ui.dev/amiresponsive" target="_blank">Am I Responsive</a>
-
-* Typography
-    * Google fonts - Open Sans and Montserrat
 ---
 
 # Acknowledgements

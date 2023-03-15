@@ -1,7 +1,8 @@
 /* GLOBAL STYLE */
 body {
     background: url('../images/background3.jpg');
-    background-color: #fdca40; /*sets background colour in case image does not load*/
+    background-color: #fdca40;
+    /*sets background colour in case image does not load*/
     background-size: cover;
     color: #0043DE;
     font-family: 'Antic', sans-serif;
@@ -20,11 +21,13 @@ h1 {
 
 /* DISPLAY AREAS */
 
- .game {
-    max-width: 700px; /*keeps game area compact on larger screens*/
-    margin-left: auto; /*left & right auto keep game area centred on screen*/
+.game {
+    max-width: 700px;
+    /*keeps game area compact on larger screens*/
+    margin-left: auto;
+    /*left & right auto keep game area centred on screen*/
     margin-right: auto;
- }
+}
 
 /* TEXT BOXES */
 
@@ -48,14 +51,15 @@ h1 {
 #rules-box {
     border: solid 2px;
     margin-top: 10%;
-    max-width: 700px; /*keeps game area compact on larger screens, consistent with other sections*/
+    max-width: 700px;
+    /*keeps game area compact on larger screens, consistent with other sections*/
     padding: 5px 5px 10px 5px;
     text-align: left;
 }
 
 /* gives line breaks between list items */
 #rules-box li {
-    margin: 1em; 
+    margin: 1em;
 }
 
 .yellow-blue-box {
@@ -133,7 +137,8 @@ h1 {
     text-align: center;
     text-shadow: 4px 4px #e6e8e6;
     width: 100%;
-    z-index: 2; /*specifies stack order so overlay goes on top of main page*/
+    z-index: 2;
+    /*specifies stack order so overlay goes on top of main page*/
 
     top: 33%;
     left: 0;
@@ -145,7 +150,8 @@ h1 {
     font-size: 1.4em;
     letter-spacing: 1px;
     margin-top: 15%;
-    max-width: 700px; /* keeps area compact on larger screens, consistent with other sections*/
+    max-width: 700px;
+    /* keeps area compact on larger screens, consistent with other sections*/
     padding: 1% 5%;
 }
 
@@ -232,7 +238,7 @@ h1 {
 
     /* adds space above h1 for improved layout*/
     h1 {
-        margin: revert; 
+        margin: revert;
     }
 
     .white-button {
@@ -245,7 +251,7 @@ h1 {
 
     /* reduces space above box for improved layout & consistency with previous display*/
     #rules-box {
-        margin-top: 5%;  
+        margin-top: 5%;
     }
 
     #end-page {
@@ -256,7 +262,7 @@ h1 {
 
     /* reduces space above box for improved layout*/
     #outro-box {
-        margin-top: 10%;  
+        margin-top: 10%;
     }
 }
 
