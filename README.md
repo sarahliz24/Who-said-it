@@ -97,11 +97,11 @@ The secondary font used is Antic, which is a clear and easy to read sans-serif f
     <img src="assets/documentation/bckgnd-small.png">
 </details>
 
-The background is set to a simple black and yellow image of repeating question marks.  This helps the user to quickly identify the purpose of the site (i.e. a quiz), and fits with the bright pop-art theme.  A background colour of Sunglow #FDCA40 (from the above colour palette) was added as the default background in case the image does not load, in order to maintain the colour scheme of the , if needed.
+The background is set to a simple black and yellow image of repeating question marks.  This helps the user to quickly identify the purpose of the site (i.e. a quiz), and fits with the bright pop-art theme.  A background colour of Sunglow #FDCA40 (from the above colour palette) was added as the default background in case the image does not load, in order to maintain the colour scheme of the site, if needed.
 
 ## Wireframes
 
-Wireframes for the project are below.  Mobile and desktop wireframes were produced using Balsamiq.  Final product is consistent with the intention and design wireframe designs.
+Wireframes for the project are below.  Mobile and desktop wireframes were produced using Balsamiq.  Final product is consistent with the intention and design of the wireframe designs.
 
  <details><summary>Home Page Mobile</summary>
     <img src="assets/documentation/mobile-wire-intro.png">
@@ -213,7 +213,7 @@ Accessibility testing was performed regularly throughout development utilising '
 
 This testing provided assistance on ensuring relevant issues were identified and resolved during development:
 * 
-*
+
  
  <details><summary>Home Page</summary>
     <img src="">
@@ -285,8 +285,11 @@ The site github link is here: <a href="https://sarahliz24.github.io/Who-said-it/
 # CREDITS
 
 ## Code used
-* Code for the reponsive design layout picture is from https://ui.dev/amiresponsive
-* 
+* How to apply spread syntax (for the question array) is based on information from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+* How to add an event listener to a loop is from the 'ES6 to the rescue' section of this stackoverflow page https://stackoverflow.com/questions/17981437/how-to-add-event-listeners-to-an-array-of-obj
+* How to add a timer delay is from bobbyhadz.com https://bobbyhadz.com/blog/javascript-hide-element-after-few-seconds
+* How to change the opacity by converting #fdca40 to rgba & selecting correct rgba settings; https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css
+* How to apply 'forEach' to any array was influenced by MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
     
 ## Content
 * Written content for...  sections for this site was created by the site author
@@ -299,6 +302,7 @@ During the creation of this site I used the following technologies:
 * Github
 * Google fonts
 * Balsamiq
+* Am I Responsive - Code for the reponsive design layout picture is from https://ui.dev/amiresponsive
 
 ## Media
 
@@ -315,3 +319,4 @@ During the creation of this site I used the following technologies:
 # Acknowledgements
 
 Thanks to my mentor Maranatha Ilesanmi who provided me with the support and advice to get the required work done.
+Also thanks to Code Institute tutor support who helped me to understand the final piece of the puzzle when I was trying to understand how to apply the acceptingAnswers concept.
