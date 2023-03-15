@@ -14,12 +14,11 @@ Site link: <a href="https://sarahliz24.github.io/Who-said-it/" target="_blank">W
     2. [Typography](#typograhy)
     3. [Wireframes](#wireframes)
 4. [Current Features](#features)
-    1. [Header and Navigation Bar](#1-header-and-navigation-bar)
-    2. [Hero image](#2-hero-image)
-    3. [Services section](#3-services-section)
-    5. [About Page](#5-about-page)
-    6. [Resources Page](#6-resources-page)
-    7. [Contact Page](#7-contact-page)
+    1. [Header](#1-header)
+    2. [Home Display](#2-home-display)
+    3. [Rules Display](#3-rules-display)
+    3. [Game Display](#4-game-display)
+    4. [End Page](#5-end-page)
 5. [Future Features](#future-features)
 6. [Testing](#testing)
     1. [Validator Testing](#validator-testing)
@@ -133,35 +132,47 @@ Wireframes for the project are below.  Mobile and desktop wireframes were produc
 ## 1. Header
 
 <details><summary>Header</summary>
-    <img src="documentation/header-and-nav.png">
+    <img src="assets/documentation/header.png">
 </details>
 
-The site name, cancer ribbon, and navigation bar are present and consistent at the top of all four site pages.
+The header "Who said it" is displayed at the top of the screen, making it easily visible.  The header is visible during all sections of game play, providing consistency to the site.  
 
-The cancer ribbon next to the group name quickly and easily identifies the page as relating to cancer, re-inforcing the reason the user visits the page.
+## 2. Home Display
 
-The group name is simple and clear, making it easy for the user to identify the overall purpose of the site when on each page.
+### Intro Box
 
-The navigation menu provides links to each of the four site pages. It clearly indicates which page the user is currently on, what each page is about, and allows the user to easily navigate around the site at all times without having to leave the page space. The navigation link is bold, with underlining removed, to clearly display to the user which page is currently active.
+<details><summary>Intro Box</summary>
+    <img src="assets/documentation/intro-box.png">
+</details>
 
-## 3. Game Section
+
+<details><summary>Rules display</summary>
+    <img src="assets/documentation/welcome-message.png">
+</details>
+
+
+
+### Rules Display
+
+<details><summary>Rules display</summary>
+    <img src="assets/documentation/rules.png">
+</details>
+
+<details><summary>Rules button</summary>
+    <img src="assets/documentation/rules-button.png">
+</details>
+
+## 3. Game Display
 
 <details><summary>Game Section</summary>
     <img src="">
 </details>
 
-
-## 5. Result Section (End Page)
-
-The about page is split into two sections:
+## 4. End Page
 
 <details><summary>Results Section</summary>
     <img src="">
 </details>
-
-
-
-
 
 ## Future Features
 
