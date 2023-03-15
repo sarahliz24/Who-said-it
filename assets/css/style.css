@@ -101,16 +101,19 @@ h1 {
 
 /*  Style question-options boxes*/
 .answer-option {
-    width: 125px;
-    height: 80px;
+    align-items: center;
     border-radius: 15px;
     border: solid #e6e8e6 3px;
     box-shadow: 5px 5px 5px #0043DE;
     background-color: #e6e8e6;
     color: #0043DE;
+    display: flex;
     font-size: 1.3em;
+    height: 80px;
+    justify-content: center;
     letter-spacing: 1px;
     margin: 5%;
+    width: 125px;
 }
 
 #reminder {
