@@ -19,7 +19,6 @@ Site link: [Who said it?](https://sarahliz24.github.io/Who-said-it/)
     1. [Header and Navigation Bar](#1-header-and-navigation-bar)
     2. [Hero image](#2-hero-image)
     3. [Services section](#3-services-section)
-    4. [Footer](#4-footer)
     5. [About Page](#5-about-page)
     6. [Resources Page](#6-resources-page)
     7. [Contact Page](#7-contact-page)
@@ -139,13 +138,6 @@ The text overlay on the hero image lets the user know what the basic aims of the
 
 This section breaks down the basic services of the group into three categories (Patient Navigation, Financial Assistance, Counselling), explaining in simple terms what each function of the group is for, and how it each could benefit the visitor.  Relevant icons under each heading help to reinforce the aim of each section.
 
-## 4. Footer
-
-<details><summary>Footer</summary>
-    <img src="documentation/footer-readme.png">
-</details>
-
-The footer is present at the bottom of each of the four site pages.  It has icon-based links for the two social media sites that are active for the group, so that the user is aware of what social media sites are in use for the group.  The user can visit these linked sites and follow the sites to stay connected or get up-to-date information on group events.  There is also a link to the medical centre where the group's services are based, so the user can see the group is aligned to an established medical facility (helping to engender trust in the site, and reinforce the groups location).  Hover text is added to each icon to make it clear before selecting the icon what it's purpose is to the user.  On mouse hover, each icon changes colour, to make it clear which icon is about to be selected.
 
 ## 5. About Page
 
