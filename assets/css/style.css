@@ -55,6 +55,7 @@ h1 {
     font-size: 1.0em;
     letter-spacing: 1px;
     margin-top: 10%;
+    max-width: 700px; /*keeps game area compact on larger screens, consistent with other sections*/
     padding: 5px;
     text-align: left;
 }
