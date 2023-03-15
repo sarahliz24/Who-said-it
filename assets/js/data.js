@@ -200,4 +200,4 @@ const questionsArray = [{
     option4: "Marilyn Monroe",
     answer: "4",
 },
-]
+];
