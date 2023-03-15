@@ -1,6 +1,6 @@
 /* GLOBAL STYLE */
 body {
-    background: url('../images/background2.avif'), url('assets/images/background3.jpg');
+    background: url('../images/background2.avif'), url('..assets/images/background3.jpg');
     background-color: #fdca40; /*sets background colour in case image does not load*/
     background-size: cover;
     color: #0043DE;
