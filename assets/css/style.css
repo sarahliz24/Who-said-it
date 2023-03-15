@@ -1,4 +1,4 @@
-/* GLOBAL STYLE*/
+/* GLOBAL STYLE */
 body {
     background: url('../images/background2.avif');
     background-color: #fdca40; /*sets background colour in case image does not load*/
@@ -18,7 +18,7 @@ h1 {
     margin: auto;
 }
 
-/*DISPLAY AREAS*/
+/* DISPLAY AREAS */
 
  .game {
     max-width: 700px; /*keeps game area compact on larger screens*/
@@ -26,20 +26,7 @@ h1 {
     margin-right: auto;
  }
 
-/*TEXT BOXES*/
-
-/* Intro box style */
-.intro-box {
-    /* converted #fdca40 to rgba to allow setting of opacity; 
-    https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
-    background-color: rgba(253, 202, 64, 0.9);
-    border: solid #e6e8e6 3px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px #e6e8e6;
-    margin: auto;
-    /*font-size: 1.2em;*/
-    width: fit-content;
-}
+/* TEXT BOXES */
 
 #rules-title {
     text-align: center;
@@ -58,7 +45,7 @@ h1 {
     text-align: left;
 }
 
-/*gives line breaks between list items*/
+/* gives line breaks between list items */
 #rules-box li {
     margin: 1em; 
 }
@@ -82,11 +69,11 @@ h1 {
     margin-bottom: 1%;
 }
 
-/*  Question box style*/
+/* Question box style */
 #question-box {
     /* converted #fdca40 to rgba to allow setting of opacity; 
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/
-    background-color: rgba(253, 202, 64, 0.9);*/
+    background-color: rgba(253, 202, 64, 0.9); */
     background-color: #e6e8e6;
     border: solid #e6e8e6 3px;
     border-radius: 15px;
@@ -99,7 +86,7 @@ h1 {
     padding: 5%;
 }
 
-/*  Set flexbox mode for question-options container*/
+/* Set flexbox mode for question-options container */
 .options-container {
     align-items: center;
     display: flex;
@@ -107,7 +94,7 @@ h1 {
     justify-content: center;
 }
 
-/*  Style question-options boxes*/
+/* Style question-options boxes */
 .answer-option {
     align-items: center;
     border-radius: 15px;
@@ -138,7 +125,7 @@ h1 {
     text-align: center;
     text-shadow: 4px 4px #e6e8e6;
     width: 100%;
-    z-index: 2;
+    z-index: 2; /*specifies stack order so overlay goes on top of main page*/
 
     top: 33%;
     left: 0;
@@ -147,22 +134,25 @@ h1 {
 }
 
 #outro-box {
-    border: solid #e6e8e6 3px;
-    border-radius: 15px;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    margin-top: 15%;
+    max-width: 700px; /* keeps area compact on larger screens, consistent with other sections*/
+    padding: 1% 5%;
+}
+
+.yellow-box {
     /* converted #fdca40 to rgba to allow setting of opacity; 
     https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/ */
     background-color: rgba(253, 202, 64, 0.9);
+    border: solid #e6e8e6 3px;
+    border-radius: 15px;
     box-shadow: 5px 5px 5px #e6e8e6;
-    font-size: 1.4em;
-    letter-spacing: 1px;
     margin: auto;
-    margin-top: 15%;
-    max-width: 700px; /*keeps area compact on larger screens, consistent with other sections*/
-    padding: 1% 5%;
     width: fit-content;
 }
 
-/* BUTTONS*/
+/* BUTTONS */
 
 .white-button {
     background-color: #e6e8e6;
@@ -228,27 +218,16 @@ h1 {
     display: none;
 }
 
-/*  USER ANSWER FEEDBACK DISPLAY */
+/* USER ANSWER FEEDBACK DISPLAY */
 .correct-answer {
     background-color: green;
-    /*border-width: 1.0rem;*/
 }
 
 .wrong-answer {
     background-color: #df2935;
-    /*border-width: 1.0rem;*/
 }
 
-/*  MEDIA QUERIES*/
-
-/* FOR SCREEN SIZES from 577px and upwards */
-@media screen and (min-width: 577px) {
-
-    /* controls flex box size so that answerOption boxes stay in 2x2 layout */
-    .options-container {
-        flex-flow: row;
-    }
-}
+/* MEDIA QUERIES*/
 
 /* FOR SCREEN SIZES from 481px and upwards */
 @media screen and (min-width: 577px) {
@@ -274,5 +253,14 @@ h1 {
     /* reduces space above box for improved layout*/
     #outro-box {
         margin-top: 10%;  
+    }
+}
+
+/* FOR SCREEN SIZES from 577px and upwards */
+@media screen and (min-width: 577px) {
+
+    /* controls flex box so that answerOption boxes stay in 2x2 or row layout only (else displays 3x1) */
+    .options-container {
+        flex-flow: row;
     }
 }
