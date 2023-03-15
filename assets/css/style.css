@@ -50,6 +50,7 @@ h1 {
     background-color: rgba(253, 202, 64, 0.9);
     border-radius: 15px;
     box-shadow: 5px 5px 5px #0043DE;
+    border: solid 2px;
     display: inline-block;
     font-size: 1.0em;
     letter-spacing: 1px;
