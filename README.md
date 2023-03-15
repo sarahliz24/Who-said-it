@@ -338,15 +338,18 @@ Accessibility testing was performed regularly throughout development utilising '
 
 * Early development WAVE testing highlighted a contast issue between the text and the background (i.e. contrast difference too low).  To solve this without significantly changing the visual look of the game the background of the text boxes was changed have a background colour that matched the background image, and was set to an opacity of 0.9.  This allowed the background image to still be visible but provided enough background contrast with the text to achieve a high contrast rating on further WAVE testing.
 
-### Browser Compatibility Testing
+## Browser Compatibility Testing
 
-The site was successfully tested (i.e. no issues identified) on the following broswers to ensure intended functionality:
+The site was successfully tested (i.e. no errors identified) on the following broswers to ensure intended functionality:
 
 * Mozilla Firefox Version 109.0 (64-bit)
 * Google Chrome Version 109.0.5414.120 (Official Build) (64-bit)
 * Microsoft Edge Version 109.0.1518.70 (Official build) (64-bit)
 
-### Device Testing
+* Chrome and Edge both return one console warning - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'. This is related to git hub adding a header-set to all pages and can be ignored  <a href="https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/" target="_blank">Git Hub Blog</a>
+* Firefox returns one console warning - "downloadable font: gasp: Changed the version number to 1 (font-family: "Antic" style:normal weight:400 stretch:100 src index:0)".  This does not affect site functionality.
+
+## Device Testing
 
 Manual testing was performed successfully (i.e. no issues identified) using the following devices:
 
@@ -356,7 +359,7 @@ Manual testing was performed successfully (i.e. no issues identified) using the 
 * Acer desktop with HP 24 inch HD monitor
 * HP Notepad
 
-### Manual Testing
+## Manual Testing
 
 The following features were manually tested on all mentioned browsers and devices, and found to be functioning as expected in each test case:
 
@@ -449,6 +452,24 @@ This site was deployed using Github as follows:
 6. Select **Save**
 7. Site link will be displayed in a box towards the top of the page 
     * It can take a few minutes on initial deployment for the link to display
+
+This site can be forked using Github as follows (to make a copy in your own repository):
+
+1. Enter the relevant Github repository
+2. Go to **Fork** button on the right-side ribbon menu (between **Unwatch** and **Star**)
+3. Click the button to make a copy automatically into your own respository
+4. **Owner** will default to your own github name
+5. Add a repository name and an optional  
+6. Select **Create Fork** button
+
+This site can be cloned using Github as follows (to make a copy on your own machine):
+
+1. Enter the relevant Github repository
+2. Click the green **Code** from the menu (to the left of the green **Gitpod** button)
+3. Copy the link under https (to copy using HTTPS)
+4. Open git bash on your own machine, and select the directory you want to save into
+5. Type 'git clone' then copy in your link
+6. Press the enter key
 
 The site github link is here: <a href="https://sarahliz24.github.io/Who-said-it/" target="_blank">Who said it?</a>
 ---
