@@ -250,19 +250,21 @@ The following features were manually tested on all mentioned browsers and device
 Responsiveness was specifically tested during development, and at final testing, using Chrome and Firefox development responsive tools with a wide variety of screen sizes, and also on the previously mentioned devices. 
 
 ## Accessibility
-* Alt text and an aria label is added to the group image
-* Aria labels are added to all links and functional icons
-* Aria-hidden labels are added to all decorative icons
-* Contrast was tested during development, and adjustments made to the hero image and overlay text to ensure high contrast for accessibility purposes was achieved
+* Early development WAVE testing highlighted a contast issue between the text and the background (i.e. contrast difference too low).  To solve this without significantly changing the visual look of the game the background of the text boxes was changed have a background colour that matched the background image, and was set to an opacity of 0.9.  This allowed the background image to still be visible but provided enough background contrast with the text to achieve a high contrast rating on further WAVE testing.
+* All areas of the game are able to be used using the same input method
+* Game controls are as simple as possible
+* Game can be started directly from the landing page
+* Answer feedback is given to user both via colour in the question box, and also via textual correct/wrong feedback in the tracker section (above the questions)
+* User can progress through questions at their own pace
 
 # BUGS
 
 ## Known bugs
-* 
+* THere are no known bugs at present
 
 ## Solved bugs
-* Th
-* WAVE testing highlighted a contast issue between the 
+* 1. During early testing it was identified that the game was recording the selected user answer twice with a single user selection (e.g. mouse click), which was then incrementing the score x2
+ To fix: checked console log, noted same rountine was running more than once (scoreTracker); identified that startGame function was called at incorrect point in game, removed this and score then incrementing correctly
 ---
 
 # Deployment
@@ -293,7 +295,7 @@ The site github link is here: <a href="https://sarahliz24.github.io/Who-said-it/
     
 ## Content
 * Written content for this site (apart from the quiz questions) was created by the site author
-* Quiz questions are fropm nextluxury.com: https://nextluxury.com/funny/funny-celebrity-quotes/
+* Quiz questions are fropm nextluxury.com: <a href="https://nextluxury.com/funny/funny-celebrity-quotes/" target="_blank">Next Luxury</a>
 	
 ## Technologies Used
 
@@ -302,8 +304,8 @@ During the creation of this site I used the following technologies:
 * Github - used for online programming, change tracking and storage respository for this project
 * Google fonts - used to search and download fonts applied to project
 * Balsamiq - used for creating the wireframes in the project development phase
-* RGBA color picker - used to convert coloors hex colours into rgba in order to set opacity on background of boxes <a href="https://rgbacolorpicker.com/hex-to-rgba " target="_blank">RGBA color picker</a>
-* Coolors website  -used to select and modifycolour palatte <a href="https://coolors.co/" target="_blank">Coolors</a>
+* RGBA color picker - used to convert coloors hex colours into rgba in order to set opacity on background of boxes <a href="https://rgbacolorpicker.com/hex-to-rgba" target="_blank">RGBA color picker</a>
+* Coolors website  -used to select and modifycolour palatte <a href="https://coolors.co" target="_blank">Coolors</a>
 
 ## Media
 
