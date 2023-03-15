@@ -145,11 +145,9 @@ The header "Who said it" is displayed at the top of the screen, making it easily
     <img src="assets/documentation/intro-box.png">
 </details>
 
-
-<details><summary>Rules display</summary>
-    <img src="assets/documentation/welcome-message.png">
+<details><summary>Let's Play Button</summary>
+    <img src="assets/documentation/letsplay-button.png">
 </details>
-
 
 
 ### Rules Display
@@ -164,14 +162,38 @@ The header "Who said it" is displayed at the top of the screen, making it easily
 
 ## 3. Game Display
 
-<details><summary>Game Section</summary>
-    <img src="">
+<details><summary>Welcome Message</summary>
+    <img src="assets/documentation/welcome-message.png">
+</details>
+
+<details><summary>Question Box</summary>
+    <img src="assets/documentation/q-and-a.png">
+</details>
+
+<details><summary>Answer Boxes</summary>
+    <img src="assets/documentation/q-and-a.png">
+</details>
+
+<details><summary>Next Button</summary>
+    <img src="assets/documentation/next-button.png">
+</details>
+
+<details><summary>Reminder Alert</summary>
+    <img src="assets/documentation/reminder.png">
 </details>
 
 ## 4. End Page
 
-<details><summary>Results Section</summary>
-    <img src="">
+<details><summary>Outro Box</summary>
+    <img src="assets/documentation/outro-box.png">
+</details>
+
+<details><summary>Play Again Button</summary>
+    <img src="assets/documentation/playagain-button.png">
+</details>
+
+<details><summary>Go Home Button</summary>
+    <img src="assets/documentation/gohome-button.png">
 </details>
 
 ## Future Features
