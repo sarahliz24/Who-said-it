@@ -292,8 +292,8 @@ The site github link is here: <a href="https://sarahliz24.github.io/Who-said-it/
 * How to apply 'forEach' to any array was influenced by MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
     
 ## Content
-* Written content for...  sections for this site was created by the site author
-* Quiz questions from...
+* Written content for this site (apart from the quiz questions) was created by the site author
+* Quiz questions are fropm nextluxury.com: https://nextluxury.com/funny/funny-celebrity-quotes/
 	
 ## Technologies Used
 
