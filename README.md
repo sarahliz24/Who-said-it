@@ -104,27 +104,27 @@ The background is set to a simple black and yellow image of repeating question m
 Wireframes for the project are below.  Mobile and desktop wireframes were produced using Balsamiq.  Final product is consistent with the intention and design wireframe designs.
 
  <details><summary>Home Page Mobile</summary>
-    <img src="documentation/wireframe-home.png">
+    <img src="assets/documentation/mobile-wire-intro.png">
 </details>
 
 <details><summary>Home Page Desktop</summary>
-    <img src="documentation/wireframe-about.png">
+    <img src="assets/documentation/desktop-wire-intro.png">
 </details>
 
 <details><summary>Game Page Mobile</summary>
-    <img src="documentation/wireframe-resources.png">
+    <img src="assets/documentation/mobile-wire-game.png">
 </details>
 
 <details><summary>Game Page Desktop</summary>
-    <img src="documentation/wireframe-contact.png">
+    <img src="assets/documentation/desktop-wire-game.png">
 </details>
 
-<details><summary>Game Page Desktop</summary>
-    <img src="documentation/wireframe-contact.png">
+<details><summary>End Page Mobile</summary>
+    <img src="assets/documentation/mobile-wire-end.png">
 </details>
 
-<details><summary>Game Page Desktop</summary>
-    <img src="documentation/wireframe-contact.png">
+<details><summary>End Page Desktop</summary>
+    <img src="assets/documentation/desktop-wire-end.png">
 </details>
 ---
 
@@ -237,7 +237,6 @@ Manual testing was performed successfully (i.e. no issues identified) using the 
 * Acer desktop with HP 24 inch HD monitor
 * HP Notepad
 
-
 ### Manual Testing
 
 The following features were manually tested on all mentioned browsers and devices, and found to be functioning as expected in each test case:
@@ -292,7 +291,6 @@ The site github link is here: <a href="https://sarahliz24.github.io/Who-said-it/
 ## Content
 * Written content for...  sections for this site was created by the site author
 * Quiz questions from...
-
 	
 ## Technologies Used
 
@@ -300,26 +298,17 @@ During the creation of this site I used the following technologies:
 
 * Github
 * Google fonts
-* Pexels
 * Balsamiq
-* Font awesome
-* Youtube
-* Google Maps
 
 ## Media
 
 * Images
-	* Hero image - from pexels.com, taken by Rocketmann_Team: https://www.pexels.com/photo/man-arm-love-people-9486905/
-	* About page image - from pexels.com, taken by Christina Morillo: https://www.pexels.com/photo/group-of-women-standing-near-desk-1181438/
-
-* Video 
-    * Patient navigator video - from Youtube, by Kaiser Permanente Thrive (creative commons re-use allowed):  https://www.youtube.com/watch?v=FV_BE9hvg68
+	* Background image...
+	* 
 
 * Typography
     * Google fonts - Open Sans and Montserrat
 
-* Icons
-    * Font Awesome 6.2.1
 
 ---
 
